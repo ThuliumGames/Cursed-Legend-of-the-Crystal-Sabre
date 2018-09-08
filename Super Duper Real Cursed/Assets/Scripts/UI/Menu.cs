@@ -43,11 +43,16 @@ public class Menu : MonoBehaviour {
 		
 		//Do the thing when player presses A
 		if (SSInput.A[0] == "Pressed") {
+			bool PutBack = true;
 			foreach (bool S in Selected) {
 				if (S) {
 					Buttons[i].GetComponent<MenuCommand>().StartCoroutine(CodeToExecute[i]);
+					PutBack = false;
 				}
 				++i;
+			}
+			if (MenuCommand.OrigPar != null && MenuCommand.OrigPar.isDraging && PutBack) {
+					MenuCommand.OrigPar.PutBack();
 			}
 		}
 	}
