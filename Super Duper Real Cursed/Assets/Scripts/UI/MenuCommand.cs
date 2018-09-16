@@ -29,7 +29,7 @@ public class MenuCommand : MonoBehaviour {
 	}
 	
 	void MoveItem () {
-		if (GameObject.Find (name+"Image").GetComponent<Image>().sprite != null && GameObject.Find ("Par").GetComponentInChildren<Image>() == null) {
+		if (GameObject.Find (name+"Image").GetComponent<Image>().sprite != GameObject.Find("Visuals").GetComponent<Menu>().EmptySprite && GameObject.Find ("Par").GetComponentInChildren<Image>() == null) {
 			if (!isDraging) {
 				OrigPar = this;
 				GameObject.Find (name+"Image").transform.SetParent(GameObject.Find ("Par").transform);
@@ -65,9 +65,22 @@ public class MenuCommand : MonoBehaviour {
 			GameObject.Find ("Par").GetComponentInChildren<Image>().gameObject.name = OrigPar.gameObject.name+"Image";
 			GameObject.Find (OrigPar.gameObject.name+"Image").transform.SetParent(OrigPar.gameObject.transform);
 			GameObject.Find (OrigPar.gameObject.name+"Image").transform.localPosition = new Vector3 (0,0,0);
-			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Image>().sprite = null;
-			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Image>().color = Color.clear;
-			
+			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Image>().sprite = GameObject.Find("Visuals").GetComponent<Menu>().EmptySprite;
+			if (GameObject.FindObjectOfType<EquipedWeapon>().GetComponentInChildren<Items>() != null) {
+				if (GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemObject.GetComponent<Items>().ItemName == GameObject.FindObjectOfType<EquipedWeapon>().GetComponentInChildren<Items>().ItemName) {
+					GameObject.FindObjectOfType<EquipedWeapon>().DesWep();
+				}
+			}
+			GameObject G = Instantiate (GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemObject, GameObject.FindObjectOfType<Movement>().gameObject.transform.position+GameObject.FindObjectOfType<Movement>().gameObject.transform.forward + new Vector3 (0, 1, 0), Quaternion.Euler (Vector3.zero));
+			G.AddComponent<Rigidbody>();
+			G.layer = LayerMask.NameToLayer ("Default");
+			foreach (MeshRenderer GO in G.GetComponentsInChildren<MeshRenderer>()) {
+				GO.gameObject.layer = LayerMask.NameToLayer ("Default");
+			}
+			G.GetComponent<Items>().ItemObject = GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemObject;
+			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemName = "";
+			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemImage = null;
+			GameObject.Find (OrigPar.gameObject.name+"Image").GetComponent<Items>().ItemObject = null;
 			OrigPar.isDraging = false;
 		}
 	}

@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 54153613797460840}
   - component: {fileID: 114996388455697728}
   - component: {fileID: 114220667271087740}
-  - component: {fileID: 136239350386806314}
+  - component: {fileID: 114419558257121728}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -896,6 +896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4712320186946368}
+  - component: {fileID: 136812219211846794}
   m_Layer: 0
   m_Name: metarig
   m_TagString: Untagged
@@ -1535,8 +1536,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250379252939506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4645397903031384}
@@ -2005,7 +2006,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4f5d0e23d6a3a4ca0775ea8b2b115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cam: {fileID: 0}
   Anim: {fileID: 95926442145912342}
+--- !u!114 &114419558257121728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250379252939506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9019c387675c3a48a3409e2786589f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Destroy
+  ItemImage: {fileID: 0}
+  ItemObject: {fileID: 0}
+  SpawnPos: {x: 0, y: 0, z: 0}
+  SpawnRot: {x: 0, y: 0, z: 0}
 --- !u!114 &114736392890184104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2039,19 +2057,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 0}
---- !u!136 &136239350386806314
+--- !u!136 &136812219211846794
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250379252939506}
+  m_GameObject: {fileID: 1845311104107962}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.375
   m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!137 &137552268819543354
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 95001394531952512}
   - component: {fileID: 114836129638635868}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2565,11 +2565,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9019c387675c3a48a3409e2786589f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: 45*
+  ItemName: Basic Sword
   ItemImage: {fileID: 21300000, guid: f7f262005cda0044789b0a7d52e0406e, type: 3}
-  ItemObject: {fileID: 1118364171415960, guid: f82ecff16104e334cbeb50801fc13853, type: 2}
+  ItemObject: {fileID: 1269399313147456, guid: 23239c0b562528140a1af5abfeba043c, type: 2}
   SpawnPos: {x: 0, y: 0, z: 0}
   SpawnRot: {x: 0, y: 0, z: 0}
+  ItemType: 
 --- !u!114 &114119378501896788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2713,6 +2714,7 @@ MonoBehaviour:
   ItemObject: {fileID: 0}
   SpawnPos: {x: 0, y: 0, z: 0}
   SpawnRot: {x: 0, y: 0, z: 0}
+  ItemType: 
 --- !u!114 &114207104339212896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3031,6 +3033,7 @@ MonoBehaviour:
   ItemObject: {fileID: 1269399313147456, guid: f28fb2e8ab1e2674b8e04011f214a8b2, type: 2}
   SpawnPos: {x: 0, y: 0, z: 0}
   SpawnRot: {x: 0, y: 0, z: 0}
+  ItemType: 
 --- !u!114 &114602841226282192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3074,6 +3077,7 @@ MonoBehaviour:
   ItemObject: {fileID: 0}
   SpawnPos: {x: 0, y: 0, z: 0}
   SpawnRot: {x: 0, y: 0, z: 0}
+  ItemType: 
 --- !u!114 &114674258989068602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3176,6 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84af4d2734c0d974ca17c81c66f9846f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmptySprite: {fileID: 21300000, guid: 9565e6bf1cf71994ea5fb8f0fdec8883, type: 3}
   Cursor: {fileID: 224256792612337044}
   Buttons:
   - {fileID: 224029415482272658}

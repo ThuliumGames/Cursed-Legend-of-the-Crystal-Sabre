@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4252670179036828}
   - component: {fileID: 114808977425419964}
-  m_Layer: 0
+  - component: {fileID: 136278148046101828}
+  - component: {fileID: 136026348836393182}
+  - component: {fileID: 114520313252083684}
+  m_Layer: 8
   m_Name: Royal Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +40,7 @@ GameObject:
   - component: {fileID: 4668746536730674}
   - component: {fileID: 33519624192971230}
   - component: {fileID: 23607038748891978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +57,7 @@ GameObject:
   - component: {fileID: 4396695250584488}
   - component: {fileID: 33275849120484516}
   - component: {fileID: 23469838936859020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +74,7 @@ GameObject:
   - component: {fileID: 4037193311977836}
   - component: {fileID: 33178624121462684}
   - component: {fileID: 23598184772789942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269399313147456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.367261, y: 0, z: 3.1721334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4037193311977836}
@@ -262,6 +265,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299491143772448}
   m_Mesh: {fileID: 4300004, guid: 5606c9206004b434990076e9a4244f10, type: 3}
+--- !u!114 &114520313252083684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269399313147456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c67d4e89dd35c34dbc768f06912accc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimName: Sword_Swing_1
 --- !u!114 &114808977425419964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,3 +293,30 @@ MonoBehaviour:
   ItemObject: {fileID: 1269399313147456}
   SpawnPos: {x: -0.089, y: 0.116, z: -0.024}
   SpawnRot: {x: 0, y: 0, z: 87.33801}
+  ItemType: Weapon
+--- !u!136 &136026348836393182
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269399313147456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 0.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136278148046101828
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269399313147456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06
+  m_Height: 0.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6, z: 0}

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
 	
+	public Sprite EmptySprite;
 	public RectTransform Cursor;
 	public RectTransform[] Buttons;
 	bool[] Selected = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false};
@@ -16,6 +17,7 @@ public class Menu : MonoBehaviour {
 	
 	void OnEnable () {
 		Cursor.localPosition = Vector3.zero;
+		GameObject.Find ("Spin").transform.Rotate (0, -GameObject.Find ("Spin").transform.localEulerAngles.y-30, 0);
 	}
 	
 	void Update () {
