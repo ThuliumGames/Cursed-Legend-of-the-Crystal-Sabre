@@ -7,6 +7,7 @@ public class LookAtPlayer : MonoBehaviour {
 	
 	public bool isCanvas;
 	public GameObject GOTLA;
+	
 	void Update () {
 		transform.LookAt(GOTLA.transform);
 		if (isCanvas) {
@@ -14,6 +15,11 @@ public class LookAtPlayer : MonoBehaviour {
 			bool CanPickUp = true;
 			foreach (Dialogue D in GameObject.FindObjectsOfType<Dialogue>()) {
 				if (D.WithinRange) {
+					if (Vector3.Distance (D.transform.position, GameObject.Find("Player").transform.position) < Dist) {
+						Dist = Vector3.Distance (D.transform.position, GameObject.Find("Player").transform.position);
+						transform.position = D.transform.position + new Vector3 (0, D.GetComponent<Dialogue>().HeightUp, 0);
+						GetComponentInChildren<Text>().text = D.name;
+					}
 					CanPickUp = false;
 				}
 			}
