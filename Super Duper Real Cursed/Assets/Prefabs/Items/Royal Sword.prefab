@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c67d4e89dd35c34dbc768f06912accc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimName: Sword_Swing_1
+  AnimName: Sword_Swing_
 --- !u!114 &114808977425419964
 MonoBehaviour:
   m_ObjectHideFlags: 1

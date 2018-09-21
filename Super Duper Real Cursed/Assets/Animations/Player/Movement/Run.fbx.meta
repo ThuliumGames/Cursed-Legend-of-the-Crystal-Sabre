@@ -85,6 +85,21 @@ ModelImporter:
     100158: toe.R_end
     100160: upper_arm.L
     100162: upper_arm.R
+    100164: f_index.03.L_end_end
+    100166: f_index.03.R_end_end
+    100168: f_middle.03.L_end_end
+    100170: f_middle.03.R_end_end
+    100172: f_pinky.03.L_end_end
+    100174: f_pinky.03.R_end_end
+    100176: f_ring.03.L_end_end
+    100178: f_ring.03.R_end_end
+    100180: head_end_end
+    100182: heel.02.L_end_end
+    100184: heel.02.R_end_end
+    100186: thumb.03.L_end_end
+    100188: thumb.03.R_end_end
+    100190: toe.L_end_end
+    100192: toe.R_end_end
     400000: chest
     400002: Cube
     400004: Cube_001
@@ -167,6 +182,21 @@ ModelImporter:
     400158: toe.R_end
     400160: upper_arm.L
     400162: upper_arm.R
+    400164: f_index.03.L_end_end
+    400166: f_index.03.R_end_end
+    400168: f_middle.03.L_end_end
+    400170: f_middle.03.R_end_end
+    400172: f_pinky.03.L_end_end
+    400174: f_pinky.03.R_end_end
+    400176: f_ring.03.L_end_end
+    400178: f_ring.03.R_end_end
+    400180: head_end_end
+    400182: heel.02.L_end_end
+    400184: heel.02.R_end_end
+    400186: thumb.03.L_end_end
+    400188: thumb.03.R_end_end
+    400190: toe.L_end_end
+    400192: toe.R_end_end
     2100000: Material_001
     2100002: body
     2100004: Material.001
@@ -221,7 +251,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1

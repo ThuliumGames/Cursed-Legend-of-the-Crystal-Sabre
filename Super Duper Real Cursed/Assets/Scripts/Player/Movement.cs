@@ -6,74 +6,58 @@ public class Movement : MonoBehaviour {
 
 	public Transform Cam;
 	public Animator Anim;
+	public Transform HeadLook;
+	public Transform HeadLookRot;
+	public Transform Head;
 	float Angle;
 	float AccAngle;
 	float Ang;
 	float CamRotPrev;
 	float CamRotWhileMove;
 	public bool CanTurn;
+	public int ComboNum;
+	public bool CanAttack;
+	public int XPresses;
+	float TurnSpeed;
 	void Update () {
 		if (!GlobVars.PlayerPause) {
 			
 			if (SSInput.X[0] == "Pressed") {
+				++XPresses;
+			}
+			if (CanAttack && XPresses > ComboNum) {
 				if (GetComponentInChildren<WeaponAnimation>() != null) {
-					Anim.Play(GetComponentInChildren<WeaponAnimation>().AnimName);
+					Anim.Play(GetComponentInChildren<WeaponAnimation>().AnimName + "" + (ComboNum+1));
 				}
 			}
-			if (SSInput.Y[0] == "Pressed") {
-				Anim.Play("Jump");
-			}
 			
-			bool CanUpdateRot = false;
-			if (Mathf.Abs (Angle) > 5) {
-				CanUpdateRot = true;
-			}
-			bool GTZ1 = true;
-			if (Angle < 0) {
-				GTZ1 = false;
-			}
 			if ((Mathf.Abs (SSInput.LHor[0]) > 0.05f || Mathf.Abs (SSInput.LVert[0]) > 0.05f) && CanTurn) {
-				Angle = (Mathf.Atan2(SSInput.LHor[0], SSInput.LVert[0])*Mathf.Rad2Deg);
-				Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), Mathf.Clamp01(new Vector2(SSInput.LHor[0], SSInput.LVert[0]).magnitude), 10*Time.deltaTime));
-				print (Mathf.Clamp01(new Vector2(SSInput.LHor[0], SSInput.LVert[0]).magnitude));
+				Angle = (Mathf.Atan2(SSInput.LHor[0], SSInput.LVert[0])*Mathf.Rad2Deg)+Cam.eulerAngles.y;
+				if (SSInput.A[0] == "Down") {
+					Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), Mathf.Clamp01(new Vector2(SSInput.LHor[0], SSInput.LVert[0]).magnitude), 20*Time.deltaTime));
+				} else {
+					Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), Mathf.Clamp01(new Vector2(SSInput.LHor[0], SSInput.LVert[0]).magnitude)/2, 20*Time.deltaTime));
+				}
 			} else {
 				Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), 0, 10*Time.deltaTime));
 			}
 			
-			bool GTZ2 = true;
-			if (Angle < 0) {
-				GTZ2 = false;
+			if (CanTurn) {
+				transform.rotation = Quaternion.Lerp(transform.rotation, HeadLookRot.rotation, TurnSpeed/(Anim.GetFloat("Speed")+1)*Time.deltaTime);
 			}
-			
-			if (Mathf.Abs (Angle) > 5 && CanUpdateRot) {
-				if (GTZ1 && !GTZ2) {
-					AccAngle -= 360;
-				}
-				
-				if (!GTZ1 && GTZ2) {
-					AccAngle += 360;
-				}
-			}
-			
-			if (Cam.eulerAngles.y < 90 || Cam.eulerAngles.y > 270) {
-				if (Cam.eulerAngles.y > 180 && CamRotPrev < 180) {
-					AccAngle += 360;
-				}
-				
-				if (Cam.eulerAngles.y < 180 && CamRotPrev > 180) {
-					AccAngle -= 360;
-				}
-			}
-			
-			if ((Mathf.Abs (SSInput.LHor[0]) > 0.05f || Mathf.Abs (SSInput.LVert[0]) > 0.05f) && CanTurn) {
-				AccAngle = Mathf.Lerp (AccAngle, Angle+Cam.eulerAngles.y, 10*Time.deltaTime);
-			}
-			
-			transform.eulerAngles = new Vector3 (0, AccAngle, 0);
-			CamRotPrev = Cam.eulerAngles.y;
-			Anim.SetFloat("Turn", Mathf.Lerp (Anim.GetFloat("Turn"), ((Angle+Cam.eulerAngles.y)-AccAngle)/90, 20*Time.deltaTime));
 		} else {
-			Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), 0, 10*Time.deltaTime));
+			Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), 0, 20*Time.deltaTime));
 		}
+		HeadLookRot.eulerAngles = new Vector3 (0, Angle, 0);
+		if (Anim.GetFloat("Speed") < 0.1f) {
+			TurnSpeed = 15;
+		} else if (HeadLookRot.localEulerAngles.y < 5f || HeadLookRot.localEulerAngles.y > 355f) {
+			TurnSpeed = 5;
+		}
+	}
+	
+	void OnAnimatorIK (int LayerIndex) {
+		Anim.SetLookAtWeight(0.5f);
+		Anim.SetLookAtPosition(HeadLook.position);
 	}
 }

@@ -53,7 +53,20 @@ public class Items : MonoBehaviour {
 								GameObject.Find ("SW4Image").GetComponent<Image>().sprite = ItemImage;
 								Destroy (this.gameObject);
 							} else {
-								print ("Can't Pick This Up");
+								GameObject.Find ("YCPTU").GetComponent<Animator>().Play("CantPickUp");
+							}
+						}
+						if (ItemType == "Shield") {
+							if (GameObject.Find ("Shield1Image").GetComponent<Items>().ItemName == "") {
+								GameObject.Find ("Shield1Image").GetComponent<Items>().ItemName = ItemName;
+								GameObject.Find ("Shield1Image").GetComponent<Items>().ItemImage = ItemImage;
+								GameObject.Find ("Shield1Image").GetComponent<Items>().ItemObject = ItemObject;
+								GameObject.Find ("Shield1Image").GetComponent<Items>().SpawnPos = SpawnPos;
+								GameObject.Find ("Shield1Image").GetComponent<Items>().SpawnRot = SpawnRot;
+								GameObject.Find ("Shield1Image").GetComponent<Image>().sprite = ItemImage;
+								Destroy (this.gameObject);
+							} else {
+								GameObject.Find ("YCPTU").GetComponent<Animator>().Play("CantPickUp");
 							}
 						}
 						GameObject.Find("Player").GetComponent<OpenInventory>().Inventory.SetActive(false);

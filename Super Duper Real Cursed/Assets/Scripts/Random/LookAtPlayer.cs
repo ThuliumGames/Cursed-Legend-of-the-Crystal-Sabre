@@ -11,14 +11,22 @@ public class LookAtPlayer : MonoBehaviour {
 		transform.LookAt(GOTLA.transform);
 		if (isCanvas) {
 			float Dist = 1000;
-			foreach (Items I in GameObject.FindObjectsOfType<Items>()) {
-				if (I.ItemName != "Destroy") {
-					if (I.gameObject.GetComponent<Rigidbody>() != null) {
-						if (Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position) < 2f &&
-							Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position) <= Dist) {
-							Dist = Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position);
-							transform.position = I.transform.position + Vector3.up;
-							GetComponentInChildren<Text>().text = I.ItemName;
+			bool CanPickUp = true;
+			foreach (Dialogue D in GameObject.FindObjectsOfType<Dialogue>()) {
+				if (D.WithinRange) {
+					CanPickUp = false;
+				}
+			}
+			if (CanPickUp) {
+				foreach (Items I in GameObject.FindObjectsOfType<Items>()) {
+					if (I.ItemName != "Destroy") {
+						if (I.gameObject.GetComponent<Rigidbody>() != null) {
+							if (Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position) < 2f &&
+								Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position) <= Dist) {
+								Dist = Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position);
+								transform.position = I.transform.position + Vector3.up;
+								GetComponentInChildren<Text>().text = I.ItemName;
+							}
 						}
 					}
 				}

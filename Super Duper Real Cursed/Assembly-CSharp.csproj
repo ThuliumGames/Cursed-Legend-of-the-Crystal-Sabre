@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Combat\EquipedWeapon.cs" />
+     <Compile Include="Assets\Scripts\Combat\ShieldEquiped.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponAnimation.cs" />
      <Compile Include="Assets\Scripts\GlobVars.cs" />
      <Compile Include="Assets\Scripts\Player\CamControl.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\Random\LookAtPlayer.cs" />
      <Compile Include="Assets\Scripts\Random\PlayerSpin.cs" />
      <Compile Include="Assets\Scripts\SSInput.cs" />
+     <Compile Include="Assets\Scripts\UI\Dialogue.cs" />
      <Compile Include="Assets\Scripts\UI\Items.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\MenuCommand.cs" />

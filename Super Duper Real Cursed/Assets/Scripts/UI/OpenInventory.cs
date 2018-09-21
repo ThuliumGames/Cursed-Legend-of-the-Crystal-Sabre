@@ -8,7 +8,7 @@ public class OpenInventory : MonoBehaviour {
 	
 	void Update () {
 		//Make the Menu Visible or Invisible
-		if (GlobVars.PlayerPause) {
+		if (GlobVars.PlayerPause && !GlobVars.Reading) {
 			Inventory.SetActive(true);
 		} else {
 			Inventory.SetActive(false);
