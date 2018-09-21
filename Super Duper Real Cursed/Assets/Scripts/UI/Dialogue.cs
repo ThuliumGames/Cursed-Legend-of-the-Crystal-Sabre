@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour {
 	
 	public float Range;
-	
+	public float HeightUp;
 	public bool WithinRange;
 	
 	public Canvas DialogueCanvas;
@@ -17,6 +17,8 @@ public class Dialogue : MonoBehaviour {
 	public Text NameWrite;
 	public GameObject GoToNext;
 	
+	public bool isSign;
+	public TextAnchor TextAlign;
 	public Color TextColor;
 	public string[] Texts;
 	public int[] NextText;
@@ -43,81 +45,84 @@ public class Dialogue : MonoBehaviour {
 		if (!GlobVars.PlayerPause || GlobVars.Reading) {
 			if (Vector3.Distance (transform.position, GameObject.Find("Player").transform.position) <= Range) {
 				WithinRange = true;
-				if (SSInput.A[0] == "Pressed" && !GlobVars.Reading) {
-					GlobVars.PlayerPause = true;
-					GlobVars.Reading = true;
-					DialogueCanvas.gameObject.SetActive(true);
-					BackgroundImage.sprite = BackgroundToUse;
-					RegWrite.color = TextColor;
-					RegWrite.text = "";
-					if (!Writing) {
-						DoneReading = false;
-						DoneTalking = false;
-						if (TextToRead == 0) {
-							TextToRead = 0;
-						} else {
-							TextToRead = NextText[TextToRead];
-						}
-						StartCoroutine(Write ());
-						Writing = true;
-					}
-				}
-				
-				if (!isQuest) {
-					if (SSInput.A[0] == "Pressed" || SSInput.B[0] == "Pressed") {
-						if (DoneReading) {
-							if (DoneTalking) {
-								DoneReading = false;
-								DoneTalking = false;
-								DialogueCanvas.gameObject.SetActive(false);
-								Writing = false;
-								GlobVars.PlayerPause = false;
-								GlobVars.Reading = false;
-								GoToNext.SetActive(false);
+				if (GameObject.Find ("Select").transform.position == transform.position + new Vector3 (0, HeightUp, 0)) {
+					if (SSInput.A[0] == "Pressed" && !GlobVars.Reading) {
+						GlobVars.PlayerPause = true;
+						GlobVars.Reading = true;
+						DialogueCanvas.gameObject.SetActive(true);
+						BackgroundImage.sprite = BackgroundToUse;
+						RegWrite.color = TextColor;
+						RegWrite.alignment = TextAlign;
+						RegWrite.text = "";
+						if (!Writing) {
+							DoneReading = false;
+							DoneTalking = false;
+							if (TextToRead == 0) {
+								TextToRead = 0;
 							} else {
+								TextToRead = NextText[TextToRead];
+							}
+							StartCoroutine(Write ());
+							Writing = true;
+						}
+					}
+					
+					if (!isQuest) {
+						if (SSInput.A[0] == "Pressed" || SSInput.B[0] == "Pressed") {
+							if (DoneReading) {
+								if (DoneTalking) {
+									DoneReading = false;
+									DoneTalking = false;
+									DialogueCanvas.gameObject.SetActive(false);
+									Writing = false;
+									GlobVars.PlayerPause = false;
+									GlobVars.Reading = false;
+									GoToNext.SetActive(false);
+								} else {
+									DoneReading = false;
+									DoneTalking = false;
+									TextToRead = NextText[TextToRead];
+									StartCoroutine(Write ());
+									Writing = true;
+								}
+							}
+						}
+					} else {
+						if (SSInput.A[0] == "Pressed") {
+							if (DoneReading) {
 								DoneReading = false;
 								DoneTalking = false;
-								TextToRead = NextText[TextToRead];
+								TextToRead = NextAnsText[(TextToRead*4)+0];
 								StartCoroutine(Write ());
 								Writing = true;
 							}
 						}
-					}
-				} else {
-					if (SSInput.A[0] == "Pressed") {
-						if (DoneReading) {
-							DoneReading = false;
-							DoneTalking = false;
-							TextToRead = NextAnsText[(TextToRead*4)+0];
-							StartCoroutine(Write ());
-							Writing = true;
+						if (SSInput.B[0] == "Pressed") {
+							if (DoneReading && AmOfAns > 1) {
+								DoneReading = false;
+								DoneTalking = false;
+								TextToRead = NextAnsText[(TextToRead*4)+1];
+								StartCoroutine(Write ());
+								Writing = true;
+							}
 						}
-					}
-					if (SSInput.B[0] == "Pressed") {
-						if (DoneReading && AmOfAns > 1) {
-							DoneReading = false;
-							DoneTalking = false;
-							TextToRead = NextAnsText[(TextToRead*4)+1];
-							StartCoroutine(Write ());
-							Writing = true;
+						if (SSInput.X[0] == "Pressed") {
+							if (DoneReading && AmOfAns > 2) {
+								DoneReading = false;
+								DoneTalking = false;
+								TextToRead = NextAnsText[(TextToRead*4)+2];
+								StartCoroutine(Write ());
+								Writing = true;
+							}
 						}
-					}
-					if (SSInput.X[0] == "Pressed") {
-						if (DoneReading && AmOfAns > 2) {
-							DoneReading = false;
-							DoneTalking = false;
-							TextToRead = NextAnsText[(TextToRead*4)+2];
-							StartCoroutine(Write ());
-							Writing = true;
-						}
-					}
-					if (SSInput.Y[0] == "Pressed") {
-						if (DoneReading && AmOfAns > 3) {
-							DoneReading = false;
-							DoneTalking = false;
-							TextToRead = NextAnsText[(TextToRead*4)+3];
-							StartCoroutine(Write ());
-							Writing = true;
+						if (SSInput.Y[0] == "Pressed") {
+							if (DoneReading && AmOfAns > 3) {
+								DoneReading = false;
+								DoneTalking = false;
+								TextToRead = NextAnsText[(TextToRead*4)+3];
+								StartCoroutine(Write ());
+								Writing = true;
+							}
 						}
 					}
 				}
@@ -141,10 +146,14 @@ public class Dialogue : MonoBehaviour {
 		AnsWrite.text = "";
 		AmOfAns = -1;
 		isQuest = false;
+		int Skip = 0;
 		foreach (char C in Texts[TextToRead]) {
+			++Skip;
 			if (C == '[') {
 				DontFin = true;
-				yield return new WaitForSeconds (WT*4);
+				if ((SSInput.B[0] != "Down" || Skip < 3) && (!isSign || Skip < 2)) {
+					yield return new WaitForSeconds (WT*4);
+				}
 				DoneReading = false;
 				DoneTalking = false;
 				TextToRead = NextText[TextToRead];
@@ -162,16 +171,18 @@ public class Dialogue : MonoBehaviour {
 					} else {
 						RegWrite.text += C;
 					}
-					if (C == '.') {
-						yield return new WaitForSeconds (WT*8);
-					} else if (C == '?') {
-						yield return new WaitForSeconds (WT*8);
-					} else if (C == '!') {
-						yield return new WaitForSeconds (WT*8);
-					} else if (C == ',') {
-						yield return new WaitForSeconds (WT*4);
-					} else {
-						yield return new WaitForSeconds (WT);
+					if ((SSInput.B[0] != "Down" || Skip < 3) && (!isSign || Skip < 2)) {
+						if (C == '.') {
+							yield return new WaitForSeconds (WT*8);
+						} else if (C == '?') {
+							yield return new WaitForSeconds (WT*8);
+						} else if (C == '!') {
+							yield return new WaitForSeconds (WT*8);
+						} else if (C == ',') {
+							yield return new WaitForSeconds (WT*4);
+						} else {
+							yield return new WaitForSeconds (WT);
+						}
 					}
 				}
 			}
@@ -187,7 +198,9 @@ public class Dialogue : MonoBehaviour {
 					} else {
 						AnsWrite.text += C;
 					}
-					yield return new WaitForSeconds (WT/10);
+					if ((SSInput.B[0] != "Down" || Skip < 3) && (!isSign || Skip < 2)) {
+						yield return new WaitForSeconds (WT/10);
+					}
 				}
 			}
 		}

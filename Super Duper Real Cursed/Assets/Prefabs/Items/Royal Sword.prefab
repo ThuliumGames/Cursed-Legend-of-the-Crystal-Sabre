@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114808977425419964}
   - component: {fileID: 136278148046101828}
   - component: {fileID: 136026348836393182}
+  - component: {fileID: 136042830920033290}
   - component: {fileID: 114520313252083684}
   m_Layer: 8
   m_Name: Royal Sword
@@ -101,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269399313147456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.367261, y: 0, z: 3.1721334}
+  m_LocalPosition: {x: 1.0834141, y: 1.83, z: 13.299401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4037193311977836}
@@ -307,6 +308,19 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136042830920033290
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269399313147456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.46
+  m_Direction: 0
+  m_Center: {x: 0, y: 0.12, z: 0}
 --- !u!136 &136278148046101828
 CapsuleCollider:
   m_ObjectHideFlags: 1
