@@ -57,9 +57,13 @@
      <Compile Include="Assets\Scripts\Combat\ShieldEquiped.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponAnimation.cs" />
      <Compile Include="Assets\Scripts\GlobVars.cs" />
+     <Compile Include="Assets\Scripts\PlayAnim.cs" />
      <Compile Include="Assets\Scripts\Player\CamControl.cs" />
+     <Compile Include="Assets\Scripts\Player\ClothesFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Quest.cs" />
      <Compile Include="Assets\Scripts\Random\LookAtPlayer.cs" />
+     <Compile Include="Assets\Scripts\Random\PlayAudio.cs" />
      <Compile Include="Assets\Scripts\Random\PlayerSpin.cs" />
      <Compile Include="Assets\Scripts\SSInput.cs" />
      <Compile Include="Assets\Scripts\UI\Dialogue.cs" />

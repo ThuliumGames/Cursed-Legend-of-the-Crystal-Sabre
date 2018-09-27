@@ -5,6 +5,9 @@ using UnityEngine;
 public class CamControl : MonoBehaviour {
 	
 	public Transform ObjToFollow;
+	float UpDown;
+	public float Max;
+	public float Min;
 	public float Back;
 	public float Up;
 	
@@ -15,6 +18,9 @@ public class CamControl : MonoBehaviour {
 			transform.Rotate (0, SSInput.RHor[0]*100*Time.deltaTime, 0);
 			transform.Translate (0, Up, -Back);
 			transform.eulerAngles = new Vector3 (10, transform.eulerAngles.y, 0);
+			UpDown += -SSInput.RVert[0]*100*Time.deltaTime;
+			UpDown = Mathf.Clamp (UpDown, Min, Max);
+			transform.RotateAround (ObjToFollow.position+new Vector3 (0,1,0), transform.right, UpDown);
 		}
 	}
 }
