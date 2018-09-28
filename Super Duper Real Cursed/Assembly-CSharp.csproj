@@ -71,10 +71,19 @@
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\MenuCommand.cs" />
      <Compile Include="Assets\Scripts\UI\OpenInventory.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\XInputUnity5\Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <None Include="Assets\XInputUnity5\Assets\XInputDotNet\Docs.txt" />
      <None Include="Assets\XInputUnity5\Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\XInputUnity5\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Water\Water\Shaders\FXWaterPro.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Super Duper Real Cursed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

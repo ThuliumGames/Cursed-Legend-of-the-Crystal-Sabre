@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour {
 	public bool ClimbMove;
 	Vector3 Pos;
 	Vector3 PrevPos;
+	public LayerMask LM;
 	
 	void Update () {
 		if (!GlobVars.PlayerPause) {
@@ -45,7 +46,7 @@ public class Movement : MonoBehaviour {
 				}
 			}
 			
-			if (!Anim.GetBool("Falling")) {
+			if (!Anim.GetBool("Falling") || Anim.GetBool("Swimming")) {
 				Anim.applyRootMotion = true;
 				if ((Mathf.Abs (SSInput.LHor[0]) > 0.05f || Mathf.Abs (SSInput.LVert[0]) > 0.05f) && CanTurn) {
 					Angle = (Mathf.Atan2(SSInput.LHor[0], SSInput.LVert[0])*Mathf.Rad2Deg)+Cam.eulerAngles.y;
@@ -87,18 +88,20 @@ public class Movement : MonoBehaviour {
 			TurnSpeed = 5;
 		}
 		RaycastHit Hit;
-		Physics.Raycast(transform.position+Vector3.up, Vector3.down, out Hit, Mathf.Infinity, LayerMask.NameToLayer ("Everything"));
+		Physics.Raycast(transform.position+Vector3.up, Vector3.down, out Hit, Mathf.Infinity, LM);
 		RaycastHit SlopeHit;
-		Physics.Raycast(transform.position+Vector3.up+(transform.forward/10), Vector3.down, out SlopeHit, Mathf.Infinity, LayerMask.NameToLayer ("Everything"));
+		Physics.Raycast(transform.position+Vector3.up+(transform.forward/10), Vector3.down, out SlopeHit, Mathf.Infinity, LM);
 		Anim.SetFloat("Slope", Mathf.Clamp(Hit.distance-SlopeHit.distance, -0.1f, 0.1f)*10);
 		if (Hit.distance < 1.25f) {
 			Anim.SetBool("Falling", false);
-			transform.position = new Vector3 (transform.position.x, Hit.point.y, transform.position.z);
-			if (!GlobVars.PlayerPause) {
-				if (SSInput.Y[0] == "Pressed") {
-					if (Anim.GetFloat("Slope") < 0.5f) {
-						transform.Translate(0, 0.3f, 0);
-						GetComponent<Rigidbody>().velocity = new Vector3 (10, 5, 10);
+			if (!Anim.GetBool("Swimming")) {
+				transform.position = new Vector3 (transform.position.x, Hit.point.y, transform.position.z);
+				if (!GlobVars.PlayerPause) {
+					if (SSInput.Y[0] == "Pressed") {
+						if (Anim.GetFloat("Slope") < 0.5f) {
+							transform.Translate(0, 0.3f, 0);
+							GetComponent<Rigidbody>().velocity = new Vector3 (10, 5, 10);
+						}
 					}
 				}
 			}
@@ -112,5 +115,15 @@ public class Movement : MonoBehaviour {
 	void OnAnimatorIK (int LayerIndex) {
 		Anim.SetLookAtWeight(0.5f);
 		Anim.SetLookAtPosition(HeadLook.position);
+	}
+	
+	void OnCollisionStay (Collision Hit) {
+		if (Hit.gameObject.layer != null) {
+			if (Hit.gameObject.layer == LayerMask.NameToLayer ("Water")) {
+				Anim.SetBool ("Swimming", true);
+			} else {
+				Anim.SetBool ("Swimming", false);
+			}
+		}
 	}
 }
