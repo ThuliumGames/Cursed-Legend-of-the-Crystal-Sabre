@@ -57,9 +57,13 @@
      <Compile Include="Assets\Scripts\Combat\ShieldEquiped.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponAnimation.cs" />
      <Compile Include="Assets\Scripts\GlobVars.cs" />
+     <Compile Include="Assets\Scripts\PlayAnim.cs" />
      <Compile Include="Assets\Scripts\Player\CamControl.cs" />
+     <Compile Include="Assets\Scripts\Player\ClothesFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Quest.cs" />
      <Compile Include="Assets\Scripts\Random\LookAtPlayer.cs" />
+     <Compile Include="Assets\Scripts\Random\PlayAudio.cs" />
      <Compile Include="Assets\Scripts\Random\PlayerSpin.cs" />
      <Compile Include="Assets\Scripts\SSInput.cs" />
      <Compile Include="Assets\Scripts\UI\Dialogue.cs" />
@@ -67,10 +71,19 @@
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\MenuCommand.cs" />
      <Compile Include="Assets\Scripts\UI\OpenInventory.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\XInputUnity5\Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <None Include="Assets\XInputUnity5\Assets\XInputDotNet\Docs.txt" />
      <None Include="Assets\XInputUnity5\Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\XInputUnity5\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Water\Water\Shaders\FXWaterPro.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Super Duper Real Cursed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

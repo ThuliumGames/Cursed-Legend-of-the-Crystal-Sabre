@@ -203,6 +203,12 @@ ModelImporter:
     2100006: Nose.001
     2100008: EyeLash.001
     2100010: Material_001.001
+    2100012: Material_001
+    2100014: body
+    2100016: Material.001
+    2100018: Lips
+    2100020: Nose
+    2100022: EyeLash
     4300000: Cube
     4300002: Cube_001
     7400000: metarig|metarig|metarig|metarigAction.001|metarig|metarigAction.001
@@ -249,7 +255,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 0
