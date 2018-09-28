@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 3
+  HeightUp: 2.5
   WithinRange: 0
   DialogueCanvas: {fileID: 0}
   BackgroundImage: {fileID: 0}
@@ -161,8 +162,14 @@ MonoBehaviour:
   AnsWrite: {fileID: 0}
   NameWrite: {fileID: 0}
   GoToNext: {fileID: 0}
+  isSign: 1
   TextAlign: 4
-  TextColor: {r: 0, g: 0, b: 0, a: 1}
+  TextColor:
+  - {r: 0, g: 0, b: 0, a: 2.9435743e+9}
+  - {r: 0, g: 0, b: 0, a: 2.9435743e+9}
+  - {r: 0, g: 0, b: 0, a: 2.9435743e+9}
+  - {r: 0, g: 0, b: 0, a: 2.9435743e+9}
+  TextSize: 32000000320000003200000032000000
   Texts:
   - Welcome to the first test world for
   - 'Curesd: Legend of the Crystal Sabre!_'
@@ -303,8 +310,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069951704194320}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.38672087, y: -0.59198564, z: -0.59198564, w: 0.38672087}
+  m_LocalPosition: {x: 0, y: 0, z: 27.48745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224415448734273878}
@@ -313,6 +320,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5.4697824, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
