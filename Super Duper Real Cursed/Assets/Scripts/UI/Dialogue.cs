@@ -19,9 +19,15 @@ public class CostomCode {
 	public int NextText;
 	public string AnsText;
 	public int[] NextAnsText;
+	public float TimedEnd;
+	[Header("To Modify Another Dialogue System")]
 	public Dialogue ModOther;
 	public int OtherNextText;
 	public string DiffName;
+	[Header("To Set Camera Position")]
+	public Vector3 CamRotation;
+	public Vector3 CamPos;
+	public float MoveSpeed;
 	[Header("")]
 	[Header("For Costom Code Execution")]
 	public CostomCode[] CodeToExecute;
@@ -29,7 +35,10 @@ public class CostomCode {
 
 public class Dialogue : MonoBehaviour {
 	
+	public bool AutoStart;
+	bool CanGo = true;
 	public float Range;
+	float OrigRange;
 	public float HeightUp;
 	public bool WithinRange;
 	[Header("")]
@@ -52,6 +61,8 @@ public class Dialogue : MonoBehaviour {
 	
 	int TextToRead = 0;
 	int AmOfAns = -1;
+	Vector3 OrigCamPos;
+	bool isMoving;
 	
 	bool DoneReading = false;
 	bool DoneTalking = false;
@@ -63,11 +74,28 @@ public class Dialogue : MonoBehaviour {
 	string Words;
 	
 	void Update () {
+		
+		if (isMoving) {
+			GameObject.Find("Main Camera").GetComponentInParent<CamControl>().enabled = false;
+			GameObject.Find("Main Camera").transform.position = Vector3.Lerp (GameObject.Find("Main Camera").transform.position, DialogueVariables[TextToRead].CamPos, DialogueVariables[TextToRead].MoveSpeed*Time.deltaTime);
+			GameObject.Find("Main Camera").transform.rotation = Quaternion.Slerp (GameObject.Find("Main Camera").transform.rotation, Quaternion.Euler (DialogueVariables[TextToRead].CamRotation), DialogueVariables[TextToRead].MoveSpeed*Time.deltaTime);
+		} else {
+			if (!GlobVars.Reading) {
+				if (!GameObject.Find("Main Camera").GetComponentInParent<CamControl>().enabled) {
+					GameObject.Find("Main Camera").transform.localPosition = new Vector3 (0, GameObject.Find("Main Camera").GetComponentInParent<CamControl>().Up, -GameObject.Find("Main Camera").GetComponentInParent<CamControl>().Back);
+					GameObject.Find("Main Camera").transform.localEulerAngles = new Vector3 (0,0,0);
+					GameObject.Find("Main Camera").GetComponentInParent<CamControl>().enabled = true;
+				}
+			}
+		}
+		
 		if (!GlobVars.PlayerPause || GlobVars.Reading) {
 			if (Vector3.Distance (transform.position, GameObject.Find("Player").transform.position) <= Range) {
 				WithinRange = true;
-				if (GameObject.Find ("Select").transform.position == transform.position + new Vector3 (0, HeightUp, 0)) {
-					if (SSInput.A[0] == "Pressed" && !GlobVars.Reading) {
+				if (GameObject.Find ("Select").transform.position == transform.position + new Vector3 (0, HeightUp, 0) || Range == 1000000) {
+					if ((SSInput.A[0] == "Pressed" || (AutoStart && CanGo)) && !GlobVars.Reading) {
+						CanGo = false;
+						OrigRange = Range;
 						GlobVars.PlayerPause = true;
 						GlobVars.Reading = true;
 						DialogueCanvas.gameObject.SetActive(true);
@@ -98,6 +126,8 @@ public class Dialogue : MonoBehaviour {
 									GlobVars.PlayerPause = false;
 									GlobVars.Reading = false;
 									GoToNext.SetActive(false);
+									isMoving = false;
+									Range = OrigRange;
 								} else {
 									DoneReading = false;
 									DoneTalking = false;
@@ -147,11 +177,16 @@ public class Dialogue : MonoBehaviour {
 					}
 				}
 			} else {
+				CanGo = true;
 				WithinRange = false;
 			}
 		}
 	}
 	IEnumerator Write () {
+		Range = 1000000;
+		if (DialogueVariables[TextToRead].CamPos != new Vector3 (0, 0, 0)) {
+			isMoving = true;
+		}
 		string ColorText = "";
 		string ColorLetters = "";
 		string SizeText = "";
@@ -180,11 +215,7 @@ public class Dialogue : MonoBehaviour {
 			++Skip;
 			if (C == '[') {
 				DontFin = true;
-				if ((SSInput.B[0] != "Down" || Skip < 3) && (!isSign || Skip < 2)) {
-					yield return new WaitForSeconds (WT*4);
-				} else {
-					yield return new WaitForSeconds (WT*16);
-				}
+				yield return new WaitForSeconds (DialogueVariables[TextToRead].TimedEnd);
 				DoneReading = false;
 				DoneTalking = false;
 				TextToRead = DialogueVariables[TextToRead].NextText;
@@ -192,7 +223,6 @@ public class Dialogue : MonoBehaviour {
 				Writing = true;
 			} else {
 				if (C == '_') {
-					DoneReading = true;
 					DoneTalking = true;
 				} else if (C == '$') {
 					isQuest = true;
@@ -277,6 +307,7 @@ public class Dialogue : MonoBehaviour {
 		}
 		
 		if (!DontFin) {
+			yield return new WaitForSeconds (DialogueVariables[TextToRead].TimedEnd);
 			GoToNext.SetActive(true);
 			DoneReading = true;
 		}
@@ -289,5 +320,9 @@ public class Dialogue : MonoBehaviour {
 		} else {
 			DialogueVariables[TextToRead].CodeToExecute[Num].component.StartCoroutine(DialogueVariables[TextToRead].CodeToExecute[Num].Command);
 		}
+	}
+	
+	void MakeNotAuto() {
+		AutoStart = false;
 	}
 }

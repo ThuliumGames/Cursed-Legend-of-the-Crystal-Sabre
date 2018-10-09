@@ -10,6 +10,8 @@ public class GlobVars : MonoBehaviour {
 	//Pause The Movement of the player but NOT the Game
 	public static bool PlayerPause;
 	public static bool Reading;
+	public static bool RidingObject;
+	public static string RidingName;
 	//Quests
 	public string[] Quests;
 	public string[] DoneQuests;
