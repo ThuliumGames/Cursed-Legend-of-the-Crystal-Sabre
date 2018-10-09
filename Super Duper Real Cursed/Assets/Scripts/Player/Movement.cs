@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour {
 	public LayerMask LM;
 	
 	void Update () {
-		if (!GlobVars.PlayerPause) {
+		if (!GlobVars.PlayerPause && !GlobVars.RidingObject) {
 			Pos = transform.position;
 			GetComponent<Rigidbody>().isKinematic = false;
 			
@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour {
 					Anim.Play(GetComponentInChildren<WeaponAnimation>().AnimName + "" + (ComboNum+1));
 				}
 			}
+			
 			if (SSInput.LS[0] == "Pressed") {
 				if (isSlow) {
 					isSlow = false;
@@ -68,11 +69,17 @@ public class Movement : MonoBehaviour {
 			}
 			
 			if (CanTurn) {
-				transform.rotation = Quaternion.Lerp(transform.rotation, HeadLookRot.rotation, TurnSpeed/(((Anim.GetFloat("Speed")*10)+1)/10)*Time.deltaTime);
+				if (!Anim.GetBool("Swimming")) {
+					transform.rotation = Quaternion.Lerp(transform.rotation, HeadLookRot.rotation, TurnSpeed/(((Anim.GetFloat("Speed")*10)+1)/10)*Time.deltaTime);
+				} else {
+					transform.rotation = Quaternion.Lerp(transform.rotation, HeadLookRot.rotation, (TurnSpeed/1.1f)*Time.deltaTime);
+				}
 			}
 		} else {
 			GetComponent<Rigidbody>().isKinematic = true;
-			transform.position = Pos;
+			if (!GlobVars.RidingObject) {
+				transform.position = Pos;
+			}
 			if (!Anim.GetBool("Falling")) {
 				Anim.SetFloat("Speed", Mathf.Lerp (Anim.GetFloat("Speed"), 0, 20*Time.deltaTime));
 			}
@@ -82,10 +89,15 @@ public class Movement : MonoBehaviour {
 			transform.Translate (0, 1.625f, 0.35f);
 		}
 		HeadLookRot.eulerAngles = new Vector3 (0, Angle, 0);
-		if (Anim.GetFloat("Speed") < 0.1f) {
-			TurnSpeed = 15;
-		} else if (HeadLookRot.localEulerAngles.y < 5f || HeadLookRot.localEulerAngles.y > 355f) {
-			TurnSpeed = 5;
+		if (Anim.GetBool("Swimming")) {
+			TurnSpeed = 1f;
+		} else {
+			if (Anim.GetFloat("Speed") < 0.1f) {
+				TurnSpeed = 15;
+			} else if (HeadLookRot.localEulerAngles.y < 5f || HeadLookRot.localEulerAngles.y > 355f) {
+				TurnSpeed = 5;
+			}
+
 		}
 		RaycastHit Hit;
 		Physics.Raycast(transform.position+Vector3.up, Vector3.down, out Hit, Mathf.Infinity, LM);

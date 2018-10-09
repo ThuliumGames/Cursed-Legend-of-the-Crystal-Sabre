@@ -13,6 +13,7 @@ public class LookAtPlayer : MonoBehaviour {
 		if (isCanvas) {
 			float Dist = 1000;
 			bool CanPickUp = true;
+			bool CanRide = true;
 			foreach (Dialogue D in GameObject.FindObjectsOfType<Dialogue>()) {
 				if (D.WithinRange) {
 					if (Vector3.Distance (D.transform.position, GameObject.Find("Player").transform.position) < Dist) {
@@ -21,6 +22,7 @@ public class LookAtPlayer : MonoBehaviour {
 						GetComponentInChildren<Text>().text = D.name;
 					}
 					CanPickUp = false;
+					CanRide = false;
 				}
 			}
 			if (CanPickUp) {
@@ -32,11 +34,24 @@ public class LookAtPlayer : MonoBehaviour {
 								Dist = Vector3.Distance(I.transform.position, GameObject.Find("Player").transform.position);
 								transform.position = I.transform.position + Vector3.up;
 								GetComponentInChildren<Text>().text = I.ItemName;
+								CanRide = false;
 							}
 						}
 					}
 				}
 			}
+			
+			if (CanRide && !GlobVars.RidingObject) {
+				foreach (Ridable R in GameObject.FindObjectsOfType<Ridable>()) {
+					if (Vector3.Distance(R.transform.position, GameObject.Find("Player").transform.position) < R.Range &&
+						Vector3.Distance(R.transform.position, GameObject.Find("Player").transform.position) <= Dist) {
+						Dist = Vector3.Distance (R.transform.position, GameObject.Find("Player").transform.position);
+						transform.position = R.transform.position + new Vector3 (0, R.GetComponent<Ridable>().SignUp, 0);
+						GetComponentInChildren<Text>().text = R.name;
+					}
+				}
+			}
+			
 			if (Dist == 1000) {
 				transform.position = Vector3.down*1000;
 			}
