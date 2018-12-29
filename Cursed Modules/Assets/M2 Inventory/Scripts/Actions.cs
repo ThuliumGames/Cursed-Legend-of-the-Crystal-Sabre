@@ -17,9 +17,7 @@ public class Actions : MonoBehaviour {
 	}
 	
 	void DropOne (int position) {
-		GameObject G = Instantiate (In.Items[position].Model, GameObject.Find("Player").transform.position, Quaternion.identity);
-		G.AddComponent<Rigidbody>();
-		In.Items.RemoveAt(position);
+		Drop (position);
 	}
 	
 	void DropAll (int position) {

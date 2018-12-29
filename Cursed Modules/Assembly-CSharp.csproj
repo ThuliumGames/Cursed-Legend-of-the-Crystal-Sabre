@@ -70,31 +70,31 @@
      <None Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\Global\XInputUnity5\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="Unity.VectorGraphics">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.003">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VectorGraphics.Editor">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -295,7 +295,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="XInputDotNetPure">
- <HintPath>C:/Users/lucas/OneDrive/Desktop/Unity Projects/Cursed Modules/Assets/Global/XInputUnity5/Assets/XInputDotNet/Plugins/XInputDotNetPure.dll</HintPath>
+ <HintPath>C:/Users/lucas/OneDrive/Documents/GitHub/Cursed-Legend-of-the-Crystal-Sabre/Cursed Modules/Assets/Global/XInputUnity5/Assets/XInputDotNet/Plugins/XInputDotNetPure.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/lucas/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
