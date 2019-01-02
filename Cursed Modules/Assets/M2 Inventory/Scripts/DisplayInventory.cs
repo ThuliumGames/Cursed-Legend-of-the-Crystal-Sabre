@@ -28,14 +28,13 @@ public class DisplayInventory : MonoBehaviour {
 	
 	public Canvas QSC;
 	
-	public Image[] QSSlot;
-	int SelectedSlot;
-	
 	public Camera UICam;
 	public GameObject AntiInteract;
 	public PostProcessVolume PPV;
 	
 	public bool Right;
+	
+	int i = 0;
 	
 	void Update () {
 		
@@ -84,17 +83,13 @@ public class DisplayInventory : MonoBehaviour {
 			if (AnyDPress) {
 				QSC.enabled = true;
 				if (SSInput.DUp[0] == "Pressed") {
-					if (SelectedSlot == 1) {
-						SelectedSlot = 0;
-					} else {
-						SelectedSlot = 1;
-					}
+
 				}
 				if (SSInput.DLeft[0] == "Pressed") {
-					SelectedSlot = 2;
+					
 				}
 				if (SSInput.DRight[0] == "Pressed") {
-					SelectedSlot = 3;
+					
 				}
 			}
 			
@@ -104,15 +99,9 @@ public class DisplayInventory : MonoBehaviour {
 		}
 		
 		if (QSC.enabled) {
-			foreach (Image I in QSSlot) {
-				I.enabled = false;
-			}
-			QSSlot[SelectedSlot].enabled = true;
+			
 		} else {
-			foreach (Image I in QSSlot) {
-				I.enabled = false;
-			}
-			SelectedSlot = -1;
+			
 		}
 		
 		if (Right) {
@@ -121,103 +110,41 @@ public class DisplayInventory : MonoBehaviour {
 			GameObject.Find(name + "/InventMove").transform.localPosition = Vector3.Lerp (GameObject.Find(name + "/InventMove").transform.localPosition, new Vector3 (0, 0, 0), 25*Time.deltaTime);
 		}
 		
-		int i = 0;
+		i = 0;
 		foreach (anItem BS in Inv.BackItems) {
-			if (BS.item != null) {
-				Slots[i].GetComponentInChildren<Image>().color = Color.white;
-				Slots[i].GetComponentInChildren<Image>().sprite = BS.item.sprite;
-				if (BS.Amount > 1) {
-					Slots[i].GetComponentInChildren<Text>().text = ""+BS.Amount;
-				} else {
-					Slots[i].GetComponentInChildren<Text>().text = "";
-				}
-				
-				//Quick Select Slot
-				Slots[i+17].GetComponentInChildren<Image>().color = Color.white;
-				Slots[i+17].GetComponentInChildren<Image>().sprite = BS.item.sprite;
-				if (BS.Amount > 1) {
-					Slots[i+17].GetComponentInChildren<Text>().text = ""+BS.Amount;
-				} else {
-					Slots[i+17].GetComponentInChildren<Text>().text = "";
-				}
-			} else {
-				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
-				Slots[i].GetComponentInChildren<Text>().text = "";
-				
-				//Quick Select Slot
-				Slots[i+17].GetComponentInChildren<Image>().color = Color.clear;
-				Slots[i+17].GetComponentInChildren<Text>().text = "";
-			}
-			++i;
+			Disp (BS);
 		}
 		foreach (anItem SS in Inv.SideItems) {
-			if (SS.item != null) {
-				Slots[i].GetComponentInChildren<Image>().color = Color.white;
-				Slots[i].GetComponentInChildren<Image>().sprite = SS.item.sprite;
-				if (SS.Amount > 1) {
-					Slots[i].GetComponentInChildren<Text>().text = ""+SS.Amount;
-				} else {
-					Slots[i].GetComponentInChildren<Text>().text = "";
-				}
-				
-				//Quick Select Slot
-				Slots[i+17].GetComponentInChildren<Image>().color = Color.white;
-				Slots[i+17].GetComponentInChildren<Image>().sprite = SS.item.sprite;
-				if (SS.Amount > 1) {
-					Slots[i+17].GetComponentInChildren<Text>().text = ""+SS.Amount;
-				} else {
-					Slots[i+17].GetComponentInChildren<Text>().text = "";
-				}
-			} else {
-				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
-				Slots[i].GetComponentInChildren<Text>().text = "";
-				
-				//Quick Select Slot
-				Slots[i+17].GetComponentInChildren<Image>().color = Color.clear;
-				Slots[i+17].GetComponentInChildren<Text>().text = "";
-			}
-			++i;
+			Disp (SS);
 		}
 		foreach (anItem BPS in Inv.BackpackItems) {
-			if (BPS.item != null) {
-				Slots[i].GetComponentInChildren<Image>().color = Color.white;
-				Slots[i].GetComponentInChildren<Image>().sprite = BPS.item.sprite;
-				if (BPS.Amount > 1) {
-					Slots[i].GetComponentInChildren<Text>().text = ""+BPS.Amount;
-				} else {
-					Slots[i].GetComponentInChildren<Text>().text = "";
-				}
+			Disp (BPS);
+		}
+		foreach (anItem AL in Inv.ArmorL) {
+			Disp (AL);
+		}
+		foreach (anItem AC in Inv.ArmorC) {
+			Disp (AC);
+		}
+		foreach (anItem AM in Inv.ArmorM) {
+			Disp (AM);
+		}
+	}
+	
+	void Disp (anItem It) {
+		if (It.item != null) {
+			Slots[i].GetComponentInChildren<Image>().color = Color.white;
+			Slots[i].GetComponentInChildren<Image>().sprite = It.item.sprite;
+			if (It.Amount > 1) {
+				Slots[i].GetComponentInChildren<Text>().text = ""+It.Amount;
 			} else {
-				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
 				Slots[i].GetComponentInChildren<Text>().text = "";
 			}
-			++i;
-		}
-		if (Inv.ArmorL != null) {
-			Slots[i].GetComponentInChildren<Image>().color = Color.white;
-			Slots[i].GetComponentInChildren<Image>().sprite = Inv.ArmorL.sprite;
-			Slots[i].GetComponentInChildren<Text>().text = "";
+			
 		} else {
 			Slots[i].GetComponentInChildren<Image>().color = Color.clear;
 			Slots[i].GetComponentInChildren<Text>().text = "";
 		}
 		++i;
-		if (Inv.ArmorC != null) {
-			Slots[i].GetComponentInChildren<Image>().color = Color.white;
-			Slots[i].GetComponentInChildren<Image>().sprite = Inv.ArmorC.sprite;
-			Slots[i].GetComponentInChildren<Text>().text = "";
-		} else {
-			Slots[i].GetComponentInChildren<Image>().color = Color.clear;
-			Slots[i].GetComponentInChildren<Text>().text = "";
-		}
-		++i;
-		if (Inv.ArmorM != null) {
-			Slots[i].GetComponentInChildren<Image>().color = Color.white;
-			Slots[i].GetComponentInChildren<Image>().sprite = Inv.ArmorM.sprite;
-			Slots[i].GetComponentInChildren<Text>().text = "";
-		} else {
-			Slots[i].GetComponentInChildren<Image>().color = Color.clear;
-			Slots[i].GetComponentInChildren<Text>().text = "";
-		}
 	}
 }

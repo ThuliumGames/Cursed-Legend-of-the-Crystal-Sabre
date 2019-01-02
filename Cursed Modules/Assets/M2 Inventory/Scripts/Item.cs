@@ -12,7 +12,7 @@ public class Item : ScriptableObject {
 	
 	public int ProgNum = 10;
 	
-	public bool[] CanBeEquipedIn = {false, false, true};
+	public bool[] CanBeEquipedIn = {false, false, true, false};
 	
 	public GameObject Model;
 	public Sprite sprite;

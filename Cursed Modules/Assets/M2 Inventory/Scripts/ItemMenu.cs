@@ -39,27 +39,27 @@ public class ItemMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 		if (Place < 6) {
 			
 			if (Place == 0 && DI.BackItems[Slot].item != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.BackItems[Slot].item.name + "\n Equip (LT / RT)";
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.BackItems[Slot].item.name;
 			}
 			
 			if (Place == 1 && DI.SideItems[Slot].item != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.SideItems[Slot].item.name + "\n Equip (LT / RT)";
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.SideItems[Slot].item.name;
 			}
 			
 			if (Place == 2 && DI.BackpackItems[Slot].item != null) {
 				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.BackpackItems[Slot].item.name;
 			}
 			
-			if (Place == 3 && DI.ArmorL != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorL.name;
+			if (Place == 3 && DI.ArmorL[Slot].item != null) {
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorL[Slot].item.name;
 			}
 			
-			if (Place == 4 && DI.ArmorC != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorC.name;
+			if (Place == 4 && DI.ArmorC[Slot].item != null) {
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorC[Slot].item.name;
 			}
 			
-			if (Place == 5 && DI.ArmorM != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorM.name;
+			if (Place == 5 && DI.ArmorM[Slot].item != null) {
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.ArmorM[Slot].item.name;
 			}
 			
 		} else {
@@ -88,15 +88,8 @@ public class ItemMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 			BPIA += DI.BackpackItems[i].Amount;
 		}
 		
-		int LAA = 0;
-		int CAA = 0;
-		
-		if (DI.ArmorL != null) {
-			LAA = 1;
-		}
-		if (DI.ArmorC != null) {
-			CAA = 1;
-		}
+		int LAA = DI.ArmorL[0].Amount;
+		int CAA = DI.ArmorC[0].Amount;
 		
 		if (Place == 0) {
 			if (DI.BackItems[Slot].item != null) {
@@ -149,36 +142,36 @@ public class ItemMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 		}
 		
 		if (Place == 3) {
-			if (DI.ArmorL != null) {
+			if (DI.ArmorL[Slot].item != null) {
 				InvenNum = BIA+SIA+BPIA;
 				int a = 0;
 				MenuParent.position = transform.position;
-				foreach (string S in DI.ArmorL.MenuOptions) {
-					Menu[a+(4-DI.ArmorL.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
+				foreach (string S in DI.ArmorL[Slot].item.MenuOptions) {
+					Menu[a+(4-DI.ArmorL[Slot].item.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
 					++a;
 				}
 			}
 		}
 		
 		if (Place == 4) {
-			if (DI.ArmorC != null) {
+			if (DI.ArmorC[Slot].item != null) {
 				InvenNum = BIA+SIA+BPIA+LAA;
 				int a = 0;
 				MenuParent.position = transform.position;
-				foreach (string S in DI.ArmorC.MenuOptions) {
-					Menu[a+(4-DI.ArmorC.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
+				foreach (string S in DI.ArmorC[Slot].item.MenuOptions) {
+					Menu[a+(4-DI.ArmorC[Slot].item.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
 					++a;
 				}
 			}
 		}
 		
 		if (Place == 5) {
-			if (DI.ArmorM != null) {
+			if (DI.ArmorM[Slot].item != null) {
 				InvenNum = BIA+SIA+BPIA+LAA+CAA;
 				int a = 0;
 				MenuParent.position = transform.position;
-				foreach (string S in DI.ArmorM.MenuOptions) {
-					Menu[a+(4-DI.ArmorM.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
+				foreach (string S in DI.ArmorM[Slot].item.MenuOptions) {
+					Menu[a+(4-DI.ArmorM[Slot].item.MenuOptions.Length)].GetComponentInChildren<Text>().text = S;
 					++a;
 				}
 			}

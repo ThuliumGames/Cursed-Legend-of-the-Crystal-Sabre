@@ -12,96 +12,86 @@ public class anItem {
 public class Inventory : MonoBehaviour {
 	
 	public List<Item> Items;
-	public List<anItem> BackItems;
-	public List<anItem> SideItems;
-	public List<anItem> BackpackItems;
-	public Item ArmorL;
-	public Item ArmorC;
-	public Item ArmorM;
+	public anItem[] BackItems;
+	public anItem[] SideItems;
+	public anItem[] BackpackItems;
+	public anItem[] ArmorL;
+	public anItem[] ArmorC;
+	public anItem[] ArmorM;
 	
 	bool Placed = false;
 	
+	int z = 0;
+	
 	void Update () {
 		
-		for (int i = 0; i < BackItems.Count; ++i) {
+		for (int i = 0; i < BackItems.Length; ++i) {
 			BackItems[i].item = null;
 			BackItems[i].Amount = 0;
 		}
-		for (int i = 0; i < SideItems.Count; ++i) {
+		
+		for (int i = 0; i < SideItems.Length; ++i) {
 			SideItems[i].item = null;
 			SideItems[i].Amount = 0;
 		}
-		for (int i = 0; i < BackpackItems.Count; ++i) {
+		
+		for (int i = 0; i < BackpackItems.Length; ++i) {
 			BackpackItems[i].item = null;
 			BackpackItems[i].Amount = 0;
 		}
 		
-		ArmorL = null;
-		ArmorC = null;
-		ArmorM = null;
+		for (int i = 0; i < ArmorL.Length; ++i) {
+			ArmorL[i].item = null;
+			ArmorL[i].Amount = 0;
+		}
+		
+		for (int i = 0; i < ArmorC.Length; ++i) {
+			ArmorC[i].item = null;
+			ArmorC[i].Amount = 0;
+		}
+		
+		for (int i = 0; i < ArmorM.Length; ++i) {
+			ArmorM[i].item = null;
+			ArmorM[i].Amount = 0;
+		}
 		
 		int b = 0;
 		int d = 0;
 		
 		foreach (Item I in Items) {
-			bool Placed = false;
+			Placed = false;
+			
 			if (I != null) {
-				if (I.CanBeEquipedIn[0]) {
-					if (I.Type != "Armor") {
-						foreach (anItem BI in BackItems) {
-							if (!Placed) {
-								if (BI.item == null || (I == BI.item && BI.Amount < I.StackSize)) {
-									Placed = true;
-									BI.item = I;
-									++BI.Amount;
-								}
-							}
-						}
-					} else {
-						if (ArmorL == null) {
-							Placed = true;
-							ArmorL = I;
-						}
+				if (!I.CanBeEquipedIn[3]) {
+					
+					if (I.CanBeEquipedIn[0]) {
+						if (!Placed)
+							foreach (anItem BI in BackItems) { Sorting (BI, I); }
 					}
-				}
-				if (!Placed) {
+					
 					if (I.CanBeEquipedIn[1]) {
-						if (I.Type != "Armor") {
-							foreach (anItem SI in SideItems) {
-								if (!Placed) {
-									if (SI.item == null || (I == SI.item && SI.Amount < I.StackSize)) {
-										Placed = true;
-										SI.item = I;
-										++SI.Amount;
-									}
-								}
-							}
-						} else {
-							if (ArmorC == null) {
-								Placed = true;
-								ArmorC = I;
-							}
-						}
+						if (!Placed)
+							foreach (anItem SI in SideItems) { Sorting (SI, I); }
 					}
-				}
-				if (!Placed) {
+					
 					if (I.CanBeEquipedIn[2]) {
-						if (I.Type != "Armor") {
-							foreach (anItem BPI in BackpackItems) {
-								if (!Placed) {
-									if (BPI.item == null || (I == BPI.item && BPI.Amount < I.StackSize)) {
-										Placed = true;
-										BPI.item = I;
-										++BPI.Amount;
-									}
-								}
-							}
-						} else {
-							if (ArmorM == null) {
-								Placed = true;
-								ArmorM = I;
-							}
-						}
+						if (!Placed)
+							foreach (anItem BPI in BackpackItems) { Sorting (BPI, I); }
+					}
+				} else {
+					if (I.CanBeEquipedIn[0]) {
+						if (!Placed)
+							foreach (anItem AL in ArmorL) { Sorting (AL, I); }
+					}
+					
+					if (I.CanBeEquipedIn[1]) {
+						if (!Placed)
+							foreach (anItem AC in ArmorC) { Sorting (AC, I); }
+					}
+					
+					if (I.CanBeEquipedIn[2]) {
+						if (!Placed)
+							foreach (anItem AM in ArmorM) { Sorting (AM, I); }
 					}
 				}
 			}
@@ -109,42 +99,44 @@ public class Inventory : MonoBehaviour {
 		}
 		
 		Items.Clear();
-		int z = 0;
-		foreach (anItem It1 in BackItems) {
-			if (It1.item != null) {
-				for (int i = 0; i < It1.Amount; ++i) {
-					Items.Insert(z, It1.item);
-					++z;
-				}
+		
+		z = 0;
+		foreach (anItem It in BackItems) {
+			Insert (It);
+		}
+		foreach (anItem It in SideItems) {
+			Insert (It);
+		}
+		foreach (anItem It in BackpackItems) {
+			Insert (It);
+		}
+		foreach (anItem It in ArmorL) {
+			Insert (It);
+		}
+		foreach (anItem It in ArmorC) {
+			Insert (It);
+		}
+		foreach (anItem It in ArmorM) {
+			Insert (It);
+		}
+	}
+	
+	void Sorting (anItem AI, Item It) {
+		if (!Placed) {
+			if (AI.item == null || (It == AI.item && AI.Amount < It.StackSize)) {
+				Placed = true;
+				AI.item = It;
+				++AI.Amount;
 			}
 		}
-		foreach (anItem It2 in SideItems) {
-			if (It2.item != null) {
-				for (int i = 0; i < It2.Amount; ++i) {	
-					Items.Insert(z, It2.item);
-					++z;
-				}
+	}
+	
+	void Insert (anItem It) {
+		if (It.item != null) {
+			for (int i = 0; i < It.Amount; ++i) {
+				Items.Insert(z, It.item);
+				++z;
 			}
-		}
-		foreach (anItem It3 in BackpackItems) {
-			if (It3.item != null) {
-				for (int i = 0; i < It3.Amount; ++i) {
-					Items.Insert(z, It3.item);
-					++z;
-				}
-			}
-		}
-		if (ArmorL != null) {
-			Items.Insert(z, ArmorL);
-			++z;
-		}
-		if (ArmorC != null) {
-			Items.Insert(z, ArmorC);
-			++z;
-		}
-		if (ArmorM != null) {
-			Items.Insert(z, ArmorM);
-			++z;
 		}
 	}
 }

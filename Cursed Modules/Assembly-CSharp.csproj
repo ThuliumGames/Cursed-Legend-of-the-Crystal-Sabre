@@ -58,12 +58,15 @@
      <Compile Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <Compile Include="Assets\M1 Player\CamControl.cs" />
      <Compile Include="Assets\M1 Player\ClothesFollow.cs" />
+     <Compile Include="Assets\M1 Player\Health.cs" />
      <Compile Include="Assets\M1 Player\Movement.cs" />
+     <Compile Include="Assets\M1 Player\PlayerActions.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\Actions.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\DisplayInventory.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\Inventory.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\Item.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\ItemMenu.cs" />
+     <Compile Include="Assets\M2 Inventory\Scripts\ItemObject.cs" />
      <Compile Include="Assets\M3 Dialogue\Dialogue.cs" />
      <Compile Include="Assets\M3 Dialogue\Quest.cs" />
      <None Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\Docs.txt" />
