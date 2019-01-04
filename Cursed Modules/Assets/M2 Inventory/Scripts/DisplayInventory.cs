@@ -26,8 +26,6 @@ public class DisplayInventory : MonoBehaviour {
 	
 	public GameObject[] Slots;
 	
-	public Canvas QSC;
-	
 	public Camera UICam;
 	public GameObject AntiInteract;
 	public PostProcessVolume PPV;
@@ -63,7 +61,6 @@ public class DisplayInventory : MonoBehaviour {
 			AntiInteract.SetActive(false);
 			PPV.weight = Mathf.Lerp(PPV.weight, 1, 7*Time.deltaTime);
 			
-			QSC.enabled = false;
 		} else {
 			
 			Right = false;
@@ -71,36 +68,6 @@ public class DisplayInventory : MonoBehaviour {
 			UICam.enabled = false;
 			AntiInteract.SetActive(true);
 			PPV.weight = Mathf.Lerp(PPV.weight, 0, 7*Time.deltaTime);
-			
-			bool AnyDPress = false;
-			
-			if ((SSInput.DUp[0] == "Pressed" || SSInput.DDown[0] == "Pressed" || SSInput.DLeft[0] == "Pressed" || SSInput.DRight[0] == "Pressed")
-				||
-				(SSInput.DUp[0] == "Down" || SSInput.DDown[0] == "Down" || SSInput.DLeft[0] == "Down" || SSInput.DRight[0] == "Down")) {
-				AnyDPress = true;
-			}
-			
-			if (AnyDPress) {
-				QSC.enabled = true;
-				if (SSInput.DUp[0] == "Pressed") {
-
-				}
-				if (SSInput.DLeft[0] == "Pressed") {
-					
-				}
-				if (SSInput.DRight[0] == "Pressed") {
-					
-				}
-			}
-			
-			if (SSInput.DDown[0] == "Released" && !AnyDPress) {
-				QSC.enabled = false;
-			}
-		}
-		
-		if (QSC.enabled) {
-			
-		} else {
 			
 		}
 		

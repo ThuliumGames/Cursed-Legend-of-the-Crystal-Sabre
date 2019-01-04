@@ -109,3 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AssociatedItem: {fileID: 11400000, guid: 5e76b61d83f09f2409103ba7898950d6, type: 2}
+  Range: 5

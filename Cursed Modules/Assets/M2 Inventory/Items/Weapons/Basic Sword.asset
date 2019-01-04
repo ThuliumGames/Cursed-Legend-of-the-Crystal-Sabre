@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5dbc34731d32e3499625e6d07c4c4b1, type: 3}
-  m_Name: BasicShield
+  m_Name: Basic Sword
   m_EditorClassIdentifier: 
-  Type: Shield
+  Type: Sword
   ProgNum: 10
-  CanBeEquipedIn: 01000000
-  Model: {fileID: 1701053945251902, guid: 3e66a4421cbc84f4bbec227bfa7187e4, type: 2}
+  CanBeEquipedIn: 01010000
+  Model: {fileID: 1667266515823362, guid: c605be159cadf2f4b8d5932a9df23412, type: 2}
   sprite: {fileID: 21300000, guid: 6496e6843fd277f42aa6dba99d186369, type: 3}
   StackSize: 1
   MenuOptions:

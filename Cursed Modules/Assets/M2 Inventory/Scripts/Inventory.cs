@@ -56,12 +56,34 @@ public class Inventory : MonoBehaviour {
 		}
 		
 		int b = 0;
-		int d = 0;
+		
+		bool HasSabre = false;
+		int SabrePlace;
+		Item Temp = null;
+		
+		foreach (Item I in Items) {
+			if (I.name == "Crystal Sabre") {
+				HasSabre = true;
+				SabrePlace = b;
+				Temp = I;
+			}
+			if (!HasSabre) {
+				++b;
+			}
+		}
+		
+		if (HasSabre) {
+			Items.RemoveAt(b);
+			Items.Insert(0, Temp);
+		}
+		
+		b = 0;
 		
 		foreach (Item I in Items) {
 			Placed = false;
 			
 			if (I != null) {
+				
 				if (!I.CanBeEquipedIn[3]) {
 					
 					if (I.CanBeEquipedIn[0]) {
@@ -93,6 +115,10 @@ public class Inventory : MonoBehaviour {
 						if (!Placed)
 							foreach (anItem AM in ArmorM) { Sorting (AM, I); }
 					}
+				}
+				if (!Placed) {
+					GameObject G = Instantiate (I.Model, GameObject.Find("Player").transform.position, Quaternion.identity);
+					G.AddComponent<Rigidbody>();
 				}
 			}
 			++b;
