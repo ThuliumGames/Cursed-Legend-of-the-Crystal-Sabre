@@ -54,9 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Global\Everything Code\GlobVars.cs" />
+     <Compile Include="Assets\Global\Everything Code\Interactables.cs" />
      <Compile Include="Assets\Global\Everything Code\Quest.cs" />
      <Compile Include="Assets\Global\Everything Code\SSInput.cs" />
      <Compile Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\Examples\XInputTestCS.cs" />
+     <Compile Include="Assets\M0 Time\Scripts\Sun.cs" />
      <Compile Include="Assets\M1 Player\CamControl.cs" />
      <Compile Include="Assets\M1 Player\ClothesFollow.cs" />
      <Compile Include="Assets\M1 Player\Health.cs" />
