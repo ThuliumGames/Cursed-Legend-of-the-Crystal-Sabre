@@ -72,7 +72,7 @@
      <Compile Include="Assets\M2 Inventory\Scripts\ItemMenu.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\ItemObject.cs" />
      <Compile Include="Assets\M2 Inventory\Scripts\ItemQuickSelect.cs" />
-     <Compile Include="Assets\M3 Dialogue\Dialogue.cs" />
+     <Compile Include="Assets\M3 Dialogue\Scripts\Dialogue.cs" />
      <Compile Include="Assets\RPG Character Animation Pack FREE\Code\CameraController.cs" />
      <Compile Include="Assets\RPG Character Animation Pack FREE\Code\GUIControlsFREE.cs" />
      <Compile Include="Assets\RPG Character Animation Pack FREE\Code\IKHandsFREE.cs" />

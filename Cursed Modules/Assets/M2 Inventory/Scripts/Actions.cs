@@ -11,7 +11,7 @@ public class Actions : MonoBehaviour {
 	}
 	
 	void Drop (int position) {
-		GameObject G = Instantiate (In.Items[position].Model, GameObject.Find("Player").transform.position, Quaternion.identity);
+		GameObject G = Instantiate (In.Items[position].Model, GameObject.Find("Player").transform.forward+Vector3.up, Quaternion.identity);
 		G.AddComponent<Rigidbody>();
 		In.Items.RemoveAt(position);
 	}
@@ -27,7 +27,7 @@ public class Actions : MonoBehaviour {
 		
 		for (int i = In.Items.Count-1; i >= 0; --i) {
 			if (In.Items[i] == n && AmountFound < n.StackSize) {
-				GameObject G = Instantiate (In.Items[i].Model, GameObject.Find("Player").transform.position+new Vector3 (0, AmountFound, 0), Quaternion.identity);
+				GameObject G = Instantiate (In.Items[i].Model, GameObject.Find("Player").transform.forward+Vector3.up+new Vector3 (0, AmountFound, 0), Quaternion.identity);
 				G.AddComponent<Rigidbody>();
 				In.Items.RemoveAt(i);
 				++AmountFound;

@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour {
 	Vector3 PrevVel;
 	
 	void Update () {
-		if (!GlobVars.PlayerPaused && !GlobVars.Paused) {
+		if (!GlobVars.PlayerPaused && !GlobVars.Paused && !GlobVars.Reading) {
 			Pos = transform.position;
 			GetComponent<Rigidbody>().isKinematic = false;
 			if (WasPaused) {
@@ -25,13 +25,22 @@ public class Movement : MonoBehaviour {
 			}
 			Anim.SetFloat("VSpeed", Mathf.Lerp (Anim.GetFloat("VSpeed"), SSInput.LVert[0], Acceleration * Time.deltaTime));
 			Anim.SetFloat("HSpeed", Mathf.Lerp (Anim.GetFloat("HSpeed"), SSInput.LHor[0], Acceleration * Time.deltaTime));
-		} else {
-			if (!WasPaused) {
-				PrevVel = GetComponent<Rigidbody>().velocity;
-				WasPaused = true;
+			
+			RaycastHit Hit;
+			if (Physics.Raycast (transform.position+Vector3.up, Vector3.down, out Hit, 1.5f)) {
+				transform.position = new Vector3 (transform.position.x, Hit.point.y, transform.position.z);
 			}
-			transform.position = Pos;
-			GetComponent<Rigidbody>().isKinematic = true;
+		} else {
+			if (GlobVars.Paused) {
+				if (!WasPaused) {
+					PrevVel = GetComponent<Rigidbody>().velocity;
+					WasPaused = true;
+				}
+				transform.position = Pos;
+				GetComponent<Rigidbody>().isKinematic = true;
+			}
+			Anim.SetFloat("VSpeed", Mathf.Lerp (Anim.GetFloat("VSpeed"), 0, Acceleration * Time.deltaTime));
+			Anim.SetFloat("HSpeed", Mathf.Lerp (Anim.GetFloat("HSpeed"), 0, Acceleration * Time.deltaTime));
 		}
 	}
 }
