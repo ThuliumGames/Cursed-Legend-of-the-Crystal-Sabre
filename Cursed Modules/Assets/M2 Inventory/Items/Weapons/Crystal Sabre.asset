@@ -14,7 +14,7 @@ MonoBehaviour:
   Type: Sword
   ProgNum: 100
   CanBeEquipedIn: 01000000
-  Model: {fileID: 1667266515823362, guid: c605be159cadf2f4b8d5932a9df23412, type: 2}
+  Model: {fileID: 1096230646673266, guid: 826e296aa8ff2dd448fd29b6a1f6814e, type: 2}
   sprite: {fileID: 21300000, guid: b881cddac19fcea4caff74182bd654a8, type: 3}
   StackSize: 1
   MenuOptions: []

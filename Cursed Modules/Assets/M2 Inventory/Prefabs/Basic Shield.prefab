@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 5
-  ObjectText: Pick Up
+  ObjectText: Pick Up (Shield)
   MessageName: PickUpObject
 --- !u!114 &114897106453808578
 MonoBehaviour:

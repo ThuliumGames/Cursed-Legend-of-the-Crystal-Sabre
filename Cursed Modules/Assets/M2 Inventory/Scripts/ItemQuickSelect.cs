@@ -111,13 +111,13 @@ public class ItemQuickSelect : MonoBehaviour {
 						WantedSpecial = 1;
 					}
 				}
-				if (SSInput.DLeft[0] == "Pressed") {
+				if (SSInput.DRight[0] == "Pressed") {
 					++WantedShield;
 					if (WantedShield > TotShields) {
 						WantedShield = 1;
 					}
 				}
-				if (SSInput.DRight[0] == "Pressed") {
+				if (SSInput.DLeft[0] == "Pressed") {
 					++WantedSword;
 					if (WantedSword > TotSwords) {
 						WantedSword = 1;

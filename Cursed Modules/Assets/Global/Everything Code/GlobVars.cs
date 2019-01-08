@@ -13,6 +13,11 @@ public class GlobVars : MonoBehaviour {
 	public static string[] Quests;
 	public static string[] DoneQuests;
 	//Interact
+	public static GameObject ClosestInteractable;
 	public static bool NearInteractable;
 	public static string InteractText;
+	//Vars for Player
+	public static ItemObject Sword;
+	public static ItemObject Shield;
+	public static ItemObject Special;
 }

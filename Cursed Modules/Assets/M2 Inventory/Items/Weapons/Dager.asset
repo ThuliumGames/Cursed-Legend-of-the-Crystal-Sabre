@@ -14,7 +14,7 @@ MonoBehaviour:
   Type: Special
   ProgNum: 5
   CanBeEquipedIn: 00010100
-  Model: {fileID: 1667266515823362, guid: 8ca136d654a0d2644869ce3a8c29f158, type: 2}
+  Model: {fileID: 1649948825606828, guid: 8ca136d654a0d2644869ce3a8c29f158, type: 2}
   sprite: {fileID: 21300000, guid: 6496e6843fd277f42aa6dba99d186369, type: 3}
   StackSize: 5
   MenuOptions:
