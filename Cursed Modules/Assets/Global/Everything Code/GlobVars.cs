@@ -21,4 +21,9 @@ public class GlobVars : MonoBehaviour {
 	public static ItemObject Sword;
 	public static ItemObject Shield;
 	public static ItemObject Special;
+	//Time
+	public static int Days;
+	public static int Hour;
+	public static int Mins;
+	public static int[] SunChangeTime = {6, 8, 18, 20};
 }

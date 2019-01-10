@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour {
 	bool WasPaused;
 	Vector3 PrevVel;
 	
+	float Rot;
+	
 	void Update () {
 		if (!GlobVars.PlayerPaused && !GlobVars.Paused && !GlobVars.Reading) {
 			Pos = transform.position;
@@ -41,6 +43,14 @@ public class Movement : MonoBehaviour {
 			}
 			Anim.SetFloat("VSpeed", Mathf.Lerp (Anim.GetFloat("VSpeed"), 0, Acceleration * Time.deltaTime));
 			Anim.SetFloat("HSpeed", Mathf.Lerp (Anim.GetFloat("HSpeed"), 0, Acceleration * Time.deltaTime));
+		}
+		
+		if (Mathf.Abs(Anim.GetFloat("VSpeed")) > 0.05f || Mathf.Abs(Anim.GetFloat("HSpeed")) > 0.05f) {
+			Rot = (Mathf.Atan2(Anim.GetFloat("HSpeed"), Anim.GetFloat("VSpeed"))*Mathf.Rad2Deg) + Camera.main.transform.eulerAngles.y;
+		} else {
+			Anim.SetFloat("VSpeed", 0);
+			Anim.SetFloat("HSpeed", 0);
+			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, Rot, transform.eulerAngles.z);	
 		}
 	}
 }
