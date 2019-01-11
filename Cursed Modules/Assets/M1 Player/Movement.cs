@@ -30,8 +30,13 @@ public class Movement : MonoBehaviour {
 				PrevVel = GetComponent<Rigidbody>().velocity;
 				WasPaused = true;
 			}
+<<<<<<< HEAD
 			transform.position = Pos;
 			GetComponent<Rigidbody>().isKinematic = true;
+=======
+			Anim.SetFloat("VSpeed", Mathf.Lerp (Anim.GetFloat("VSpeed"), 0, Acceleration * Time.deltaTime));
+			Anim.SetFloat("HSpeed", Mathf.Lerp (Anim.GetFloat("HSpeed"), 0, Acceleration * Time.deltaTime));
+>>>>>>> parent of d2b774e... Better Anim
 		}
 	}
 }
