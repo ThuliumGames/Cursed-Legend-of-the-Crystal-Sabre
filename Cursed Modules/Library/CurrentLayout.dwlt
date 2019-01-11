@@ -109,7 +109,11 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 70
+=======
+  controlID: 5872
+>>>>>>> parent of f5a0b0d... Bugs
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +137,11 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 71
+=======
+  controlID: 5873
+>>>>>>> parent of f5a0b0d... Bugs
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,7 +193,11 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 112
+=======
+  controlID: 5691
+>>>>>>> parent of f5a0b0d... Bugs
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -409,9 +421,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.07846858, y: -0.36163333, z: 0.030561714, w: -0.92850953}
   m_Size:
+<<<<<<< HEAD
     m_Target: 35.6467
     speed: 2
     m_Value: 35.6467
+=======
+    m_Target: 195.27649
+    speed: 2
+    m_Value: 195.27649
+>>>>>>> parent of f5a0b0d... Bugs
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -449,8 +467,47 @@ MonoBehaviour:
     height: 437
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
+<<<<<<< HEAD
     m_KeySerializationHelper: []
     m_ValueSerializationHelper: []
+=======
+    m_KeySerializationHelper:
+    - {fileID: 1107991345907536522, guid: 9267a57eebfe50043aa9e221a274eb97, type: 2}
+    - {fileID: 1102193122782486642, guid: 9267a57eebfe50043aa9e221a274eb97, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.62330425
+      e01: 0
+      e02: 0
+      e03: -0.30662537
+      e10: 0
+      e11: 0.62330425
+      e12: 0
+      e13: 126.11848
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.75935036
+      e01: 0
+      e02: 0
+      e03: -19.575203
+      e10: 0
+      e11: 0.75935036
+      e12: 0
+      e13: 93.99277
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+>>>>>>> parent of f5a0b0d... Bugs
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -517,9 +574,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: e6fbffff00000000
+    m_SelectedIDs: 50300000
+    m_LastClickedID: 12368
+    m_ExpandedIDs: a44cfeff5cfbffff76fbffff98fbffffe4fbffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +675,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 862b0000
     m_LastClickedID: 11142
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000002f000000ca9a3b
+=======
+    m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
+>>>>>>> parent of f5a0b0d... Bugs
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +707,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000002f0000
+=======
+    m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
+>>>>>>> parent of f5a0b0d... Bugs
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

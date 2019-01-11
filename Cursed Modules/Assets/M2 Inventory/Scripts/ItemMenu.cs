@@ -39,11 +39,11 @@ public class ItemMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 		if (Place < 6) {
 			
 			if (Place == 0 && DI.BackItems[Slot].item != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.BackItems[Slot].item.name;
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.BackItems[Slot].item.name + "\n Equip (LT / RT)";
 			}
 			
 			if (Place == 1 && DI.SideItems[Slot].item != null) {
-				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.SideItems[Slot].item.name;
+				GameObject.Find ("Item Name").GetComponent<Text>().text = DI.SideItems[Slot].item.name + "\n Equip (LT / RT)";
 			}
 			
 			if (Place == 2 && DI.BackpackItems[Slot].item != null) {

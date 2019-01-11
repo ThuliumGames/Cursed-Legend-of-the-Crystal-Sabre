@@ -26,6 +26,14 @@ public class DisplayInventory : MonoBehaviour {
 	
 	public GameObject[] Slots;
 	
+<<<<<<< HEAD
+=======
+	public Canvas QSC;
+	
+	public Image[] QSSlot;
+	int SelectedSlot;
+	
+>>>>>>> parent of f5a0b0d... Bugs
 	public Camera UICam;
 	public GameObject AntiInteract;
 	public PostProcessVolume PPV;
@@ -65,6 +73,50 @@ public class DisplayInventory : MonoBehaviour {
 			UICam.enabled = false;
 			AntiInteract.SetActive(true);
 			PPV.weight = Mathf.Lerp(PPV.weight, 0, 7*Time.deltaTime);
+<<<<<<< HEAD
+=======
+			
+			bool AnyDPress = false;
+			
+			if ((SSInput.DUp[0] == "Pressed" || SSInput.DDown[0] == "Pressed" || SSInput.DLeft[0] == "Pressed" || SSInput.DRight[0] == "Pressed")
+				||
+				(SSInput.DUp[0] == "Down" || SSInput.DDown[0] == "Down" || SSInput.DLeft[0] == "Down" || SSInput.DRight[0] == "Down")) {
+				AnyDPress = true;
+			}
+			
+			if (AnyDPress) {
+				QSC.enabled = true;
+				if (SSInput.DUp[0] == "Pressed") {
+					if (SelectedSlot == 1) {
+						SelectedSlot = 0;
+					} else {
+						SelectedSlot = 1;
+					}
+				}
+				if (SSInput.DLeft[0] == "Pressed") {
+					SelectedSlot = 2;
+				}
+				if (SSInput.DRight[0] == "Pressed") {
+					SelectedSlot = 3;
+				}
+			}
+			
+			if (SSInput.DDown[0] == "Released" && !AnyDPress) {
+				QSC.enabled = false;
+			}
+		}
+		
+		if (QSC.enabled) {
+			foreach (Image I in QSSlot) {
+				I.enabled = false;
+			}
+			QSSlot[SelectedSlot].enabled = true;
+		} else {
+			foreach (Image I in QSSlot) {
+				I.enabled = false;
+			}
+			SelectedSlot = -1;
+>>>>>>> parent of f5a0b0d... Bugs
 		}
 		
 		if (Right) {
@@ -83,9 +135,28 @@ public class DisplayInventory : MonoBehaviour {
 				} else {
 					Slots[i].GetComponentInChildren<Text>().text = "";
 				}
+<<<<<<< HEAD
 			} else {
 				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
 				Slots[i].GetComponentInChildren<Text>().text = "";
+=======
+				
+				//Quick Select Slot
+				Slots[i+17].GetComponentInChildren<Image>().color = Color.white;
+				Slots[i+17].GetComponentInChildren<Image>().sprite = BS.item.sprite;
+				if (BS.Amount > 1) {
+					Slots[i+17].GetComponentInChildren<Text>().text = ""+BS.Amount;
+				} else {
+					Slots[i+17].GetComponentInChildren<Text>().text = "";
+				}
+			} else {
+				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
+				Slots[i].GetComponentInChildren<Text>().text = "";
+				
+				//Quick Select Slot
+				Slots[i+17].GetComponentInChildren<Image>().color = Color.clear;
+				Slots[i+17].GetComponentInChildren<Text>().text = "";
+>>>>>>> parent of f5a0b0d... Bugs
 			}
 			++i;
 		}
@@ -98,9 +169,28 @@ public class DisplayInventory : MonoBehaviour {
 				} else {
 					Slots[i].GetComponentInChildren<Text>().text = "";
 				}
+<<<<<<< HEAD
 			} else {
 				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
 				Slots[i].GetComponentInChildren<Text>().text = "";
+=======
+				
+				//Quick Select Slot
+				Slots[i+17].GetComponentInChildren<Image>().color = Color.white;
+				Slots[i+17].GetComponentInChildren<Image>().sprite = SS.item.sprite;
+				if (SS.Amount > 1) {
+					Slots[i+17].GetComponentInChildren<Text>().text = ""+SS.Amount;
+				} else {
+					Slots[i+17].GetComponentInChildren<Text>().text = "";
+				}
+			} else {
+				Slots[i].GetComponentInChildren<Image>().color = Color.clear;
+				Slots[i].GetComponentInChildren<Text>().text = "";
+				
+				//Quick Select Slot
+				Slots[i+17].GetComponentInChildren<Image>().color = Color.clear;
+				Slots[i+17].GetComponentInChildren<Text>().text = "";
+>>>>>>> parent of f5a0b0d... Bugs
 			}
 			++i;
 		}
