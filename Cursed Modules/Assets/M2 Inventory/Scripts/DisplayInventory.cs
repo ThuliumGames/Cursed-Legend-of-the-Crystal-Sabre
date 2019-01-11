@@ -27,6 +27,7 @@ public class DisplayInventory : MonoBehaviour {
 	public GameObject[] Slots;
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	public Canvas QSC;
 	
@@ -34,6 +35,10 @@ public class DisplayInventory : MonoBehaviour {
 	int SelectedSlot;
 	
 >>>>>>> parent of f5a0b0d... Bugs
+=======
+	public Canvas QSC;
+	
+>>>>>>> parent of dc5a648... Better Inventory
 	public Camera UICam;
 	public GameObject AntiInteract;
 	public PostProcessVolume PPV;
@@ -66,6 +71,11 @@ public class DisplayInventory : MonoBehaviour {
 			UICam.enabled = true;
 			AntiInteract.SetActive(false);
 			PPV.weight = Mathf.Lerp(PPV.weight, 1, 7*Time.deltaTime);
+<<<<<<< HEAD
+=======
+			
+			QSC.enabled = false;
+>>>>>>> parent of dc5a648... Better Inventory
 		} else {
 			
 			Right = false;
@@ -84,6 +94,7 @@ public class DisplayInventory : MonoBehaviour {
 				AnyDPress = true;
 			}
 			
+<<<<<<< HEAD
 			if (AnyDPress) {
 				QSC.enabled = true;
 				if (SSInput.DUp[0] == "Pressed") {
@@ -98,6 +109,26 @@ public class DisplayInventory : MonoBehaviour {
 				}
 				if (SSInput.DRight[0] == "Pressed") {
 					SelectedSlot = 3;
+=======
+			bool AnyDPress = false;
+			
+			if ((SSInput.DUp[0] == "Pressed" || SSInput.DDown[0] == "Pressed" || SSInput.DLeft[0] == "Pressed" || SSInput.DRight[0] == "Pressed")
+				||
+				(SSInput.DUp[0] == "Down" || SSInput.DDown[0] == "Down" || SSInput.DLeft[0] == "Down" || SSInput.DRight[0] == "Down")) {
+				AnyDPress = true;
+			}
+			
+			if (AnyDPress) {
+				QSC.enabled = true;
+				if (SSInput.DUp[0] == "Pressed") {
+
+				}
+				if (SSInput.DLeft[0] == "Pressed") {
+					
+				}
+				if (SSInput.DRight[0] == "Pressed") {
+					
+>>>>>>> parent of dc5a648... Better Inventory
 				}
 			}
 			
@@ -107,6 +138,7 @@ public class DisplayInventory : MonoBehaviour {
 		}
 		
 		if (QSC.enabled) {
+<<<<<<< HEAD
 			foreach (Image I in QSSlot) {
 				I.enabled = false;
 			}
@@ -117,6 +149,11 @@ public class DisplayInventory : MonoBehaviour {
 			}
 			SelectedSlot = -1;
 >>>>>>> parent of f5a0b0d... Bugs
+=======
+			
+		} else {
+			
+>>>>>>> parent of dc5a648... Better Inventory
 		}
 		
 		if (Right) {

@@ -46,6 +46,7 @@ public class Inventory : MonoBehaviour {
 		foreach (Item I in Items) {
 			bool Placed = false;
 			if (I != null) {
+<<<<<<< HEAD
 				if (I.CanBeEquipedIn[0]) {
 					if (I.Type != "Armor") {
 						foreach (anItem BI in BackItems) {
@@ -62,6 +63,28 @@ public class Inventory : MonoBehaviour {
 							Placed = true;
 							ArmorL = I;
 						}
+=======
+				if (!I.CanBeEquipedIn[3]) {
+					
+					if (I.CanBeEquipedIn[0]) {
+						if (!Placed)
+							foreach (anItem BI in BackItems) { Sorting (BI, I); }
+					}
+					
+					if (I.CanBeEquipedIn[1]) {
+						if (!Placed)
+							foreach (anItem SI in SideItems) { Sorting (SI, I); }
+					}
+					
+					if (I.CanBeEquipedIn[2]) {
+						if (!Placed)
+							foreach (anItem BPI in BackpackItems) { Sorting (BPI, I); }
+					}
+				} else {
+					if (I.CanBeEquipedIn[0]) {
+						if (!Placed)
+							foreach (anItem AL in ArmorL) { Sorting (AL, I); }
+>>>>>>> parent of dc5a648... Better Inventory
 					}
 				}
 				if (!Placed) {
@@ -84,6 +107,7 @@ public class Inventory : MonoBehaviour {
 						}
 					}
 				}
+<<<<<<< HEAD
 				if (!Placed) {
 					if (I.CanBeEquipedIn[2]) {
 						if (I.Type != "Armor") {
@@ -104,6 +128,8 @@ public class Inventory : MonoBehaviour {
 						}
 					}
 				}
+=======
+>>>>>>> parent of dc5a648... Better Inventory
 			}
 			++b;
 		}
