@@ -106,9 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,6 +127,9 @@ MonoBehaviour:
 =======
   controlID: 229
 >>>>>>> parent of 7e462bc... New Character
+=======
+  controlID: 9622
+>>>>>>> parent of 686a447... Readded Dialogue
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,6 +157,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 71
 =======
   controlID: 5873
@@ -166,6 +171,9 @@ MonoBehaviour:
 =======
   controlID: 230
 >>>>>>> parent of 7e462bc... New Character
+=======
+  controlID: 9623
+>>>>>>> parent of 686a447... Readded Dialogue
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,12 +194,13 @@ MonoBehaviour:
     height: 458
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
   - {fileID: 12}
   - {fileID: 14}
   - {fileID: 15}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_Selected: 0
@@ -207,6 +216,10 @@ MonoBehaviour:
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
 =======
 >>>>>>> parent of 7e462bc... New Character
+=======
+  m_Selected: 1
+  m_LastSelected: 3
+>>>>>>> parent of 686a447... Readded Dialogue
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,6 +247,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 112
 =======
   controlID: 5691
@@ -247,6 +261,9 @@ MonoBehaviour:
 =======
   controlID: 209
 >>>>>>> parent of 7e462bc... New Character
+=======
+  controlID: 9624
+>>>>>>> parent of 686a447... Readded Dialogue
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,12 +280,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 467
     height: 273
 <<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 =======
+=======
+    width: 344
+    height: 271
+>>>>>>> parent of 686a447... Readded Dialogue
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> parent of 7e462bc... New Character
@@ -292,10 +314,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 467
     y: 0
     width: 627
     height: 273
+=======
+    x: 344
+    y: 0
+    width: 802
+    height: 271
+>>>>>>> parent of 686a447... Readded Dialogue
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
   m_ActualView: {fileID: 18}
@@ -353,12 +382,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 19
 =======
     y: 92.8
 >>>>>>> parent of 7e462bc... New Character
     width: 1092
     height: 437
+=======
+    y: 92.8
+    width: 1144
+    height: 439
+>>>>>>> parent of 686a447... Readded Dialogue
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -382,7 +417,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -391,6 +426,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
 <<<<<<< HEAD
       width: 1536
       height: 693
@@ -402,6 +438,12 @@ MonoBehaviour:
     m_Scale: {x: 0.48611107, y: 0.4861111}
     m_Translation: {x: 546, y: 210}
 >>>>>>> parent of 7e462bc... New Character
+=======
+      width: 1144
+      height: 422
+    m_Scale: {x: 0.4884259, y: 0.48842594}
+    m_Translation: {x: 572, y: 211}
+>>>>>>> parent of 686a447... Readded Dialogue
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -409,14 +451,19 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -957.50653
+=======
+      x: -1171.109
+>>>>>>> parent of 686a447... Readded Dialogue
       y: -432
-      width: 1915.0131
+      width: 2342.218
       height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.8020833
+  m_defaultScale: 0.48842594
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1920, y: 887.5}
 =======
       x: -1123.2001
@@ -429,6 +476,9 @@ MonoBehaviour:
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1365, y: 546.25}
 >>>>>>> parent of 7e462bc... New Character
+=======
+  m_LastWindowPixelSize: {x: 1430, y: 548.75}
+>>>>>>> parent of 686a447... Readded Dialogue
   m_ClearInEditMode: 0
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -461,6 +511,7 @@ MonoBehaviour:
   m_SceneLighting: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastFramingTime: 51.319292586956884
 =======
   lastFramingTime: 730.7873949590174
@@ -468,10 +519,14 @@ MonoBehaviour:
 =======
   lastFramingTime: 34.91171654903936
 >>>>>>> parent of 7e462bc... New Character
+=======
+  lastFramingTime: 61.516535582959754
+>>>>>>> parent of 686a447... Readded Dialogue
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -493,6 +548,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -10.535926, y: -3.5607293, z: -11.283595}
 >>>>>>> parent of 7e462bc... New Character
+=======
+    m_Target: {x: 3.7560177, y: 1.403997, z: 2.8566961}
+    speed: 2
+    m_Value: {x: 3.7560177, y: 1.403997, z: 2.8566961}
+>>>>>>> parent of 686a447... Readded Dialogue
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -520,6 +580,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -563,6 +624,15 @@ MonoBehaviour:
     speed: 2
     m_Value: 33.553524
 >>>>>>> parent of 7e462bc... New Character
+=======
+    m_Target: {x: 0.06394359, y: 0.38316473, z: -0.02659999, w: 0.92108}
+    speed: 2
+    m_Value: {x: 0.06394359, y: 0.38316473, z: -0.026599992, w: 0.92108}
+  m_Size:
+    m_Target: 6.377805
+    speed: 2
+    m_Value: 6.377805
+>>>>>>> parent of 686a447... Readded Dialogue
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -632,12 +702,20 @@ MonoBehaviour:
     - e00: 0.70228213
       e01: 0
       e02: 0
+<<<<<<< HEAD
       e03: 175.71785
+=======
+      e03: 189.61105
+>>>>>>> parent of 686a447... Readded Dialogue
       e10: 0
       e11: 0.70228213
       e12: 0
+<<<<<<< HEAD
       e13: 155.09235
 >>>>>>> parent of 7e462bc... New Character
+=======
+      e13: 164.69382
+>>>>>>> parent of 686a447... Readded Dialogue
       e20: 0
       e21: 0
       e22: 1
@@ -728,13 +806,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 550.4
     width: 465
     height: 252
+=======
+    y: 552.8
+    width: 342
+    height: 250
+>>>>>>> parent of 686a447... Readded Dialogue
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: 50300000
@@ -756,6 +841,11 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: 1efbffff00000000
 >>>>>>> parent of 7e462bc... New Character
+=======
+    m_SelectedIDs: 7a7ff7ff
+    m_LastClickedID: -557190
+    m_ExpandedIDs: 7e7ff7ff9256fbff60adfcff86adfcff7ad0fcff9ed0fcffded1fcff9252fdffe6fbffff00000000b83f0200
+>>>>>>> parent of 686a447... Readded Dialogue
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -800,9 +890,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 550.4
     width: 465
     height: 252
+=======
+    y: 552.8
+    width: 342
+    height: 250
+>>>>>>> parent of 686a447... Readded Dialogue
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -824,10 +920,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 469.6
     y: 550.4
     width: 623
     height: 252
+=======
+    x: 346.4
+    y: 552.8
+    width: 798
+    height: 250
+>>>>>>> parent of 686a447... Readded Dialogue
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -841,6 +944,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -870,11 +974,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/M2 Inventory/Prefabs
 >>>>>>> parent of 7e462bc... New Character
+=======
+    - Assets/RPG Character Animation Pack FREE/Animations/Unarmed
+  m_ViewMode: 1
+  m_StartGridSize: 60
+  m_LastFolders:
+  - Assets/RPG Character Animation Pack FREE/Animations/Unarmed
+>>>>>>> parent of 686a447... Readded Dialogue
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\lucas\OneDrive\Desktop\Unity Projects\Cursed Modules
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -904,6 +1016,12 @@ MonoBehaviour:
     m_LastClickedID: 11400
     m_ExpandedIDs: 00000000822b0000ba2b00003a2c0000122e0000142e0000542f000000ca9a3b
 >>>>>>> parent of 7e462bc... New Character
+=======
+    scrollPos: {x: 0, y: 343}
+    m_SelectedIDs: 1e3c0000
+    m_LastClickedID: 15390
+    m_ExpandedIDs: 00000000622b0000a02b0000242c00004c2e00004e2e00009c2f000006370000083700000a3700000c370000d03b0000f03b00000c3c000000ca9a3b
+>>>>>>> parent of 686a447... Readded Dialogue
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -935,6 +1053,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000002f0000
 =======
     m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
@@ -948,6 +1067,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000822b0000ba2b00003a2c0000122e0000542f000000ca9a3b
 >>>>>>> parent of 7e462bc... New Character
+=======
+    m_ExpandedIDs: 00000000622b0000a02b0000242c00004c2e00004e2e00009c2f000006370000083700000a3700000c370000d03b0000f03b00000c3c000000ca9a3b
+>>>>>>> parent of 686a447... Readded Dialogue
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -975,11 +1097,16 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
 =======
     m_HadKeyboardFocusLastEvent: 1
 >>>>>>> parent of 7e462bc... New Character
     m_ExpandedInstanceIDs: d8230000e4230000ce230000ba240000d023000092f7ffffe8230000e0230000ea23000024240000ec2300003c250000902500000a2500006c250000e0260000e0390000a0080000a216ffff442f00007625000080250000882e0000022e0000502f00007825000082250000082e0000562f00002e2500001401f3ff14290000b22a000054250000dc2a0000302500003a250000fa91f3fff0afffffe22a00003c87f9ffb0a2f9ff626dfcff58b6fdffc8470000c22a0000082600000a2600003e2500003c08ffff162b000048250000e02a0000382600000c260000e62a00000e2600000865ffff4a250000462b0000482b00004a2b0000d29100004a920000604f0100d0540100e6350000163000004e3b0000c83b0000a23a00003c2a0000b8370000142e0000a02c0000ec2d000006890000a6340000f2eafcff5a2a000062300000602c0000ac4f0000325f000000000000
+=======
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: d8230000e4230000ce230000ba240000d023000092f7ffffe8230000e0230000ea23000024240000ec2300003c250000902500000a2500006c250000e0260000e0390000a0080000a216ffff442f00007625000080250000882e0000022e0000502f00007825000082250000082e0000562f00002e2500001401f3ff14290000b22a000054250000dc2a0000302500003a250000fa91f3fff0afffffe22a00003c87f9ffb0a2f9ff626dfcff58b6fdffc8470000c22a0000082600000a2600003e2500003c08ffff162b000048250000e02a0000382600000c260000e62a00000e2600000865ffff4a250000462b0000482b00004a2b0000d29100004a920000604f0100d0540100e6350000163000004e3b0000c83b0000a23a00003c2a0000b8370000142e0000a02c0000ec2d000006890000a6340000f2eafcff5a2a000062300000602c0000ac4f0000325f000000000000b62e00001c430000
+>>>>>>> parent of 686a447... Readded Dialogue
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -995,7 +1122,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1003,9 +1130,13 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 126.5}
     m_GridSize: 60
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 194
+=======
+  m_DirectoriesAreaWidth: 245
+>>>>>>> parent of 686a447... Readded Dialogue
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

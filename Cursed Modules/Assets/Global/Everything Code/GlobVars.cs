@@ -33,6 +33,10 @@ public class GlobVars : MonoBehaviour {
 	public static string[] Quests;
 	public static string[] DoneQuests;
 	//Interact
+<<<<<<< HEAD
+=======
+	public static GameObject ClosestInteractable;
+>>>>>>> parent of 686a447... Readded Dialogue
 	public static bool NearInteractable;
 	public static string InteractText;
 >>>>>>> parent of 7e462bc... New Character

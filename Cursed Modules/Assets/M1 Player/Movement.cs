@@ -19,6 +19,13 @@ public class Movement : MonoBehaviour {
 			Anim.SetFloat("VSpeed", Mathf.Lerp (Anim.GetFloat("VSpeed"), SSInput.LVert[0], Acceleration * Time.deltaTime));
 			Anim.SetFloat("HSpeed", Mathf.Lerp (Anim.GetFloat("HSpeed"), SSInput.LHor[0], Acceleration * Time.deltaTime));
 		} else {
+<<<<<<< HEAD
+=======
+			if (!WasPaused) {
+				PrevVel = GetComponent<Rigidbody>().velocity;
+				WasPaused = true;
+			}
+>>>>>>> parent of 686a447... Readded Dialogue
 			transform.position = Pos;
 			GetComponent<Rigidbody>().isKinematic = true;
 		}

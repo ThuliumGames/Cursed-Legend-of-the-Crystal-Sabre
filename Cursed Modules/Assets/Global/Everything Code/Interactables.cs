@@ -18,13 +18,24 @@ public class Interactables : MonoBehaviour {
 			
 			DFP = Vector3.Distance (I.transform.position, GameObject.Find("Player").transform.position);
 			
+<<<<<<< HEAD
 			if (DFP < Dist && DFP <= Range) {
+=======
+			if (DFP < Dist) {
+>>>>>>> parent of 686a447... Readded Dialogue
 				Dist = DFP;
 			}
 		}
 		
 		DFP = Vector3.Distance (transform.position, GameObject.Find("Player").transform.position);
 		
+<<<<<<< HEAD
+=======
+		if (Dist == DFP) {
+			GlobVars.ClosestInteractable = this.gameObject;
+		}
+		
+>>>>>>> parent of 686a447... Readded Dialogue
 		if (Dist == DFP && DFP <= Range) {
 			GlobVars.NearInteractable = true;
 			GlobVars.InteractText = ObjectText;
