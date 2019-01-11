@@ -111,6 +111,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 70
 =======
   controlID: 5872
@@ -118,6 +119,9 @@ MonoBehaviour:
 =======
   controlID: 10
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  controlID: 1499
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,6 +147,7 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 71
 =======
   controlID: 5873
@@ -150,6 +155,9 @@ MonoBehaviour:
 =======
   controlID: 11
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  controlID: 1500
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,12 +178,13 @@ MonoBehaviour:
     height: 458
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 12}
   - {fileID: 14}
   - {fileID: 15}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 2
@@ -183,6 +192,10 @@ MonoBehaviour:
   m_Selected: 1
   m_LastSelected: 0
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  m_Selected: 0
+  m_LastSelected: 1
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,6 +221,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 112
 =======
   controlID: 5691
@@ -215,6 +229,9 @@ MonoBehaviour:
 =======
   controlID: 100
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  controlID: 1523
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -315,11 +332,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 92.8
+    y: 19
     width: 1092
     height: 437
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -341,7 +358,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -350,25 +367,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1092
-      height: 420
-    m_Scale: {x: 0.48611107, y: 0.4861111}
-    m_Translation: {x: 546, y: 210}
+      width: 1536
+      height: 693
+    m_Scale: {x: 0.8020833, y: 0.8020833}
+    m_Translation: {x: 768, y: 346.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1123.2001
+      x: -957.50653
       y: -432
-      width: 2246.4001
+      width: 1915.0131
       height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.4861111
+  m_defaultScale: 0.8020833
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1365, y: 546.25}
+  m_LastWindowPixelSize: {x: 1920, y: 887.5}
   m_ClearInEditMode: 0
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -409,6 +426,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 4.2864633, y: 2.2696638, z: 26.904129}
     speed: 2
     m_Value: {x: 4.2864633, y: 2.2696638, z: 26.904129}
@@ -417,6 +435,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -1.0343595, y: -3.4432757, z: 48.64825}
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_Target: {x: -15.683046, y: -0.053611152, z: -9.345376}
+    speed: 2
+    m_Value: {x: -15.683046, y: -0.053611152, z: -9.345376}
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -445,6 +468,7 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.07846858, y: -0.36163333, z: 0.030561714, w: -0.92850953}
     speed: 2
     m_Value: {x: -0.07846858, y: -0.36163333, z: 0.030561714, w: -0.92850953}
@@ -467,6 +491,15 @@ MonoBehaviour:
     speed: 2
     m_Value: 148.13928
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_Target: {x: 0.14855348, y: 0.5306765, z: -0.09509306, w: 0.8290186}
+    speed: 2
+    m_Value: {x: 0.14855348, y: 0.5306765, z: -0.09509306, w: 0.8290186}
+  m_Size:
+    m_Target: 5.3189573
+    speed: 2
+    m_Value: 5.3189573
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -621,6 +654,7 @@ MonoBehaviour:
     height: 252
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
     m_SelectedIDs: 50300000
@@ -631,6 +665,12 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    scrollPos: {x: 0, y: 101}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,6 +757,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/M1 Player
   m_ViewMode: 1
   m_StartGridSize: 60
@@ -729,11 +770,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/M2 Inventory
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    - Assets/M2 Inventory/Items
+  m_ViewMode: 1
+  m_StartGridSize: 60
+  m_LastFolders:
+  - Assets/M2 Inventory/Items
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\lucas\OneDrive\Desktop\Unity Projects\Cursed Modules
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 862b0000
@@ -749,6 +798,12 @@ MonoBehaviour:
     m_LastClickedID: 12048
     m_ExpandedIDs: 00000000542b00008c2b0000082c0000d82d0000102f000000ca9a3b
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 102c0000
+    m_LastClickedID: 11280
+    m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,6 +833,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000002f0000
 =======
     m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
@@ -785,6 +841,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000542b00008c2b0000082c0000d82d0000102f0000
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -811,7 +870,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: d8230000e4230000ce230000ba240000d023000092f7ffffe8230000e0230000ea23000024240000ec2300003c250000902500000a2500006c250000e0260000e0390000a0080000a216ffff442f00007625000080250000882e0000022e0000502f00007825000082250000082e0000562f00002e2500001401f3ff14290000b22a000054250000dc2a0000302500003a250000fa91f3fff0afffffe22a00003c87f9ffb0a2f9ff626dfcff58b6fdffc8470000c22a0000082600000a2600003e2500003c08ffff162b000048250000e02a0000382600000c260000e62a00000e2600000865ffff4a250000462b0000482b00004a2b0000d29100004a920000604f0100d0540100e6350000163000004e3b0000c83b0000a23a00003c2a0000b8370000142e0000a02c0000ec2d000006890000a6340000f2eafcff5a2a000062300000602c0000ac4f0000325f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

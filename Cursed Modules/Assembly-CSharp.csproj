@@ -54,6 +54,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Global\Everything Code\GlobVars.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\Global\Everything Code\Quest.cs" />
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
      <Compile Include="Assets\Global\Everything Code\SSInput.cs" />
      <Compile Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <Compile Include="Assets\M1 Player\CamControl.cs" />

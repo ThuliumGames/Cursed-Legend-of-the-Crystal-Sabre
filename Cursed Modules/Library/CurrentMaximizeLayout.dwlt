@@ -22,6 +22,7 @@ MonoBehaviour:
     height: 731
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 711, y: 492}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
@@ -38,6 +39,12 @@ MonoBehaviour:
   vertical: 0
   controlID: 5257
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 564
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,6 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 5306
 >>>>>>> parent of f5a0b0d... Bugs
 =======
@@ -155,6 +163,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 5258
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  controlID: 543
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,6 +433,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 5329
 >>>>>>> parent of f5a0b0d... Bugs
 =======
@@ -430,6 +442,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 5259
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  controlID: 496
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -449,8 +464,13 @@ MonoBehaviour:
     width: 467
     height: 273
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
   m_ActualView: {fileID: 10}
 =======
   m_MinSize: {x: 102, y: 121}
@@ -488,6 +508,7 @@ MonoBehaviour:
     height: 252
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -504,6 +525,12 @@ MonoBehaviour:
     m_LastClickedID: -1054
     m_ExpandedIDs: e4fbffffe6fbffff00000000
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    scrollPos: {x: 0, y: 421}
+    m_SelectedIDs: 2c4cfeff2a4cfeff284cfeff264cfeff244cfeff224cfeff204cfeff1e4cfeff1c4cfeff1a4cfeff
+    m_LastClickedID: -111590
+    m_ExpandedIDs: e6fbffff00000000
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,6 +671,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 4c2c0000
     m_LastClickedID: 11340
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000fc2e000000ca9a3b
@@ -658,6 +686,11 @@ MonoBehaviour:
     m_LastClickedID: 12176
     m_ExpandedIDs: 000000004e2b0000862b0000022c0000d02d0000082f000000ca9a3b
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_SelectedIDs: 102c0000
+    m_LastClickedID: 11280
+    m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -687,6 +720,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000fc2e000000ca9a3b
 =======
     m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
@@ -694,6 +728,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000004e2b0000862b0000022c0000d02d0000082f000000ca9a3b
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,6 +757,7 @@ MonoBehaviour:
   m_ListAreaState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 34300000
     m_LastClickedInstanceID: 12340
     m_HadKeyboardFocusLastEvent: 0
@@ -733,6 +771,11 @@ MonoBehaviour:
     m_LastClickedInstanceID: -1054
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_SelectedInstanceIDs: 2c4cfeff2a4cfeff284cfeff264cfeff244cfeff224cfeff204cfeff1e4cfeff1c4cfeff1a4cfeff
+    m_LastClickedInstanceID: -111590
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
     m_ExpandedInstanceIDs: d8230000e4230000ce230000ba240000d023000092f7ffffe8230000e0230000ea23000024240000ec2300003c250000902500000a2500006c250000e0260000e0390000a0080000a216ffff442f00007625000080250000882e0000022e0000502f00007825000082250000082e0000562f00002e2500001401f3ff14290000b22a000054250000dc2a0000302500003a250000fa91f3fff0afffffe22a00003c87f9ffb0a2f9ff626dfcff58b6fdffc8470000c22a0000082600000a2600003e2500003c08ffff162b000048250000e02a0000382600000c260000e62a00000e2600000865ffff4a250000462b0000482b00004a2b0000d29100004a920000604f0100d0540100e6350000163000004e3b0000c83b0000a23a00003c2a0000b8370000142e0000a02c0000ec2d000006890000a6340000f2eafcff5a2a000062300000602c0000ac4f0000325f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

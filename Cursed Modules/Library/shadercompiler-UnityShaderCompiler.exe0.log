@@ -6,6 +6,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -42,3 +43,5 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 =======
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+>>>>>>> parent of a0d4f02... Bugs and Optimizing
