@@ -26,6 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 492}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 7258
 =======
   m_MinSize: {x: 713, y: 492}
@@ -45,6 +46,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 564
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+  controlID: 111
+>>>>>>> parent of 7e462bc... New Character
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,7 +70,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 92.8
+=======
+    y: 19
+>>>>>>> parent of 7e462bc... New Character
     width: 1092
     height: 437
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -101,16 +109,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 1536
       height: 693
     m_Scale: {x: 0.8020833, y: 0.8020833}
     m_Translation: {x: 768, y: 346.5}
+=======
+      width: 1092
+      height: 420
+    m_Scale: {x: 0.48611107, y: 0.4861111}
+    m_Translation: {x: 546, y: 210}
+>>>>>>> parent of 7e462bc... New Character
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -957.50653
       y: -432
       width: 1915.0131
@@ -120,6 +136,17 @@ MonoBehaviour:
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1920, y: 887.5}
+=======
+      x: -1123.2001
+      y: -432
+      width: 2246.4001
+      height: 864
+    m_MinimalGUI: 1
+  m_defaultScale: 0.4861111
+  m_TargetTexture: {fileID: 0}
+  m_CurrentColorSpace: 0
+  m_LastWindowPixelSize: {x: 1365, y: 546.25}
+>>>>>>> parent of 7e462bc... New Character
   m_ClearInEditMode: 0
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -155,6 +182,7 @@ MonoBehaviour:
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 5306
 >>>>>>> parent of f5a0b0d... Bugs
 =======
@@ -166,6 +194,9 @@ MonoBehaviour:
 =======
   controlID: 543
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+  controlID: 112
+>>>>>>> parent of 7e462bc... New Character
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +215,13 @@ MonoBehaviour:
     y: 0
     width: 1094
     height: 458
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 7e462bc... New Character
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 5}
@@ -221,14 +257,19 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastFramingTime: 2232.0593205910477
 =======
   lastFramingTime: 730.7873949590174
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+  lastFramingTime: 34.91171654903936
+>>>>>>> parent of 7e462bc... New Character
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 221.48466, y: -10.221667, z: 4831.65}
     speed: 2
@@ -238,6 +279,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -1.0343595, y: -3.4432757, z: 48.64825}
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_Target: {x: -15.683046, y: -0.053611152, z: -9.345376}
+    speed: 2
+    m_Value: {x: -15.683046, y: -0.053611152, z: -9.345376}
+>>>>>>> parent of 7e462bc... New Character
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -266,6 +312,7 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0.024403494, y: 0.8783863, z: -0.04510963, w: 0.47519174}
     speed: 2
     m_Value: {x: 0.024403494, y: 0.8783864, z: -0.045109633, w: 0.47519177}
@@ -282,6 +329,15 @@ MonoBehaviour:
     speed: 2
     m_Value: 195.27649
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    m_Target: {x: 0.14855348, y: 0.5306765, z: -0.09509306, w: 0.8290186}
+    speed: 2
+    m_Value: {x: 0.14855348, y: 0.5306765, z: -0.09509306, w: 0.8290186}
+  m_Size:
+    m_Target: 5.3189573
+    speed: 2
+    m_Value: 5.3189573
+>>>>>>> parent of 7e462bc... New Character
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -316,7 +372,11 @@ MonoBehaviour:
     x: 0
     y: 92.8
     width: 1092
+<<<<<<< HEAD
     height: 436
+=======
+    height: 437
+>>>>>>> parent of 7e462bc... New Character
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
 <<<<<<< HEAD
@@ -327,6 +387,7 @@ MonoBehaviour:
     - {fileID: 1107991345907536522, guid: 9267a57eebfe50043aa9e221a274eb97, type: 2}
     - {fileID: 1102193122782486642, guid: 9267a57eebfe50043aa9e221a274eb97, type: 2}
     m_ValueSerializationHelper:
+<<<<<<< HEAD
     - e00: 0.62330425
       e01: 0
       e02: 0
@@ -335,6 +396,16 @@ MonoBehaviour:
       e11: 0.62330425
       e12: 0
       e13: 126.11848
+=======
+    - e00: 0.70228213
+      e01: 0
+      e02: 0
+      e03: 175.71785
+      e10: 0
+      e11: 0.70228213
+      e12: 0
+      e13: 155.09235
+>>>>>>> parent of 7e462bc... New Character
       e20: 0
       e21: 0
       e22: 1
@@ -361,12 +432,17 @@ MonoBehaviour:
       e33: 1
 >>>>>>> parent of dc5a648... Better Inventory
   m_PreviewAnimator: {fileID: 0}
+<<<<<<< HEAD
   m_AnimatorController: {fileID: 9100000, guid: 9267a57eebfe50043aa9e221a274eb97,
     type: 2}
   m_BreadCrumbs:
   - m_Target: {fileID: 1107991345907536522, guid: 9267a57eebfe50043aa9e221a274eb97,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
+=======
+  m_AnimatorController: {fileID: 0}
+  m_BreadCrumbs: []
+>>>>>>> parent of 7e462bc... New Character
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -400,8 +476,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92.8
+<<<<<<< HEAD
     width: 1092
     height: 436
+=======
+    width: 727
+    height: 437
+>>>>>>> parent of 7e462bc... New Character
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &8
 MonoBehaviour:
@@ -425,6 +506,7 @@ MonoBehaviour:
     height: 273
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 434, y: 271}
   m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
@@ -445,6 +527,12 @@ MonoBehaviour:
 =======
   controlID: 496
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+  m_MinSize: {x: 436, y: 271}
+  m_MaxSize: {x: 14006, y: 10021}
+  vertical: 0
+  controlID: 64
+>>>>>>> parent of 7e462bc... New Character
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -465,6 +553,9 @@ MonoBehaviour:
     height: 273
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7e462bc... New Character
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 =======
@@ -512,6 +603,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 34300000
     m_LastClickedID: 12340
     m_ExpandedIDs: e4fbffffe6fbffff00000000
@@ -531,6 +623,11 @@ MonoBehaviour:
     m_LastClickedID: -111590
     m_ExpandedIDs: e6fbffff00000000
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 1efbffff00000000
+>>>>>>> parent of 7e462bc... New Character
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -597,8 +694,13 @@ MonoBehaviour:
     y: 0
     width: 627
     height: 273
+<<<<<<< HEAD
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
+=======
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+>>>>>>> parent of 7e462bc... New Character
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -644,6 +746,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/M2 Inventory/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 60
@@ -663,11 +766,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/M2 Inventory/Scripts
 >>>>>>> parent of dc5a648... Better Inventory
+=======
+    - Assets/M2 Inventory/Items
+  m_ViewMode: 1
+  m_StartGridSize: 60
+  m_LastFolders:
+  - Assets/M2 Inventory/Items
+>>>>>>> parent of 7e462bc... New Character
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\lucas\OneDrive\Desktop\Unity Projects\Cursed Modules
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
 <<<<<<< HEAD
@@ -691,6 +802,12 @@ MonoBehaviour:
     m_LastClickedID: 11280
     m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 3a2c0000
+    m_LastClickedID: 11322
+    m_ExpandedIDs: 00000000822b0000ba2b00003a2c0000122e0000542f000000ca9a3b
+>>>>>>> parent of 7e462bc... New Character
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -721,6 +838,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004e2b0000002c0000c82d0000fc2e000000ca9a3b
 =======
     m_ExpandedIDs: 000000004e2b0000862b0000002c0000ce2d0000062f000000ca9a3b
@@ -731,6 +849,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000582b0000902b0000102c0000e82d0000282f000000ca9a3b
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+    m_ExpandedIDs: 00000000822b0000ba2b00003a2c0000122e0000542f0000
+>>>>>>> parent of 7e462bc... New Character
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,6 +879,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 34300000
     m_LastClickedInstanceID: 12340
     m_HadKeyboardFocusLastEvent: 0
@@ -776,6 +898,11 @@ MonoBehaviour:
     m_LastClickedInstanceID: -111590
     m_HadKeyboardFocusLastEvent: 1
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+>>>>>>> parent of 7e462bc... New Character
     m_ExpandedInstanceIDs: d8230000e4230000ce230000ba240000d023000092f7ffffe8230000e0230000ea23000024240000ec2300003c250000902500000a2500006c250000e0260000e0390000a0080000a216ffff442f00007625000080250000882e0000022e0000502f00007825000082250000082e0000562f00002e2500001401f3ff14290000b22a000054250000dc2a0000302500003a250000fa91f3fff0afffffe22a00003c87f9ffb0a2f9ff626dfcff58b6fdffc8470000c22a0000082600000a2600003e2500003c08ffff162b000048250000e02a0000382600000c260000e62a00000e2600000865ffff4a250000462b0000482b00004a2b0000d29100004a920000604f0100d0540100e6350000163000004e3b0000c83b0000a23a00003c2a0000b8370000142e0000a02c0000ec2d000006890000a6340000f2eafcff5a2a000062300000602c0000ac4f0000325f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

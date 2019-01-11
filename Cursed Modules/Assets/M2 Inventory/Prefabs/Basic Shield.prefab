@@ -97,6 +97,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &114736357895384598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1667266515823362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8ecc9de64cb248a665689277ed438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 5
+  ObjectText: Pick Up
+  MessageName: PickUpObject
+>>>>>>> parent of 7e462bc... New Character
 --- !u!114 &114897106453808578
 MonoBehaviour:
   m_ObjectHideFlags: 1

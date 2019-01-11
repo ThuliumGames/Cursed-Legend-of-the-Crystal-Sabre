@@ -11,6 +11,7 @@ public class GlobVars : MonoBehaviour {
 	public static bool PlayerPaused;
 	public static bool Reading;
 	//Quests
+<<<<<<< HEAD
 	public string[] Quests;
 	public string[] DoneQuests;
 	
@@ -28,4 +29,11 @@ public class GlobVars : MonoBehaviour {
 			++i;
 		}
 	}
+=======
+	public static string[] Quests;
+	public static string[] DoneQuests;
+	//Interact
+	public static bool NearInteractable;
+	public static string InteractText;
+>>>>>>> parent of 7e462bc... New Character
 }

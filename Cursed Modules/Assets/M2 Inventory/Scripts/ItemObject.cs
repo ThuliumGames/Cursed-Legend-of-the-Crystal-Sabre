@@ -7,6 +7,7 @@ public class ItemObject : MonoBehaviour {
 	
 	public Item AssociatedItem;
 	
+<<<<<<< HEAD
 	public float Range;
 	
 	void Update () {
@@ -45,5 +46,10 @@ public class ItemObject : MonoBehaviour {
 			}
 >>>>>>> parent of a0d4f02... Bugs and Optimizing
 		}
+=======
+	void PickUpObject () {
+		GameObject.FindObjectOfType<Inventory>().Items.Add(AssociatedItem);
+		Destroy(this.gameObject);
+>>>>>>> parent of 7e462bc... New Character
 	}
 }

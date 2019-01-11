@@ -73,7 +73,10 @@
      <Compile Include="Assets\M2 Inventory\Scripts\ItemObject.cs" />
 >>>>>>> parent of dc5a648... Better Inventory
      <Compile Include="Assets\M3 Dialogue\Dialogue.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\M3 Dialogue\Quest.cs" />
+=======
+>>>>>>> parent of 7e462bc... New Character
      <None Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\Docs.txt" />
      <None Include="Assets\Global\XInputUnity5\Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\Global\XInputUnity5\ProjectSettings\ProjectVersion.txt" />
